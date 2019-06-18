@@ -11,6 +11,7 @@ body {
   background: #fff;
   color: #666666;
   font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
 }
 
 a {
@@ -117,9 +118,15 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
+@media (max-width: 1024px) {
+  #header #logo h1 {
+    font-size: 30px;
+  }
+}
+
 @media (max-width: 768px) {
   #header #logo h1 {
-    font-size: 26px;
+    font-size: 24px;
   }
   #header #logo img {
     max-height: 40px;
@@ -770,6 +777,19 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: #d7a200;
 }
 
+#screenshot {
+  position: relative;
+  top: 0;
+  left: 300px;
+  width: 700px;
+  height: 400px;
+  float: right;
+  background-image: url("https://www.sccpre.cat/mypng/full/96-960892_cellphone-or-tablet-horizontal-position-screen-visualization-display.png");
+  background-size: auto 100%;
+  background-position: bottom left !important;
+  background-repeat: no-repeat;
+}
+
 #appicon {
   height: 30vh;
   width: 30vh;
@@ -787,8 +807,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.25s ease-in-out;
 }
 
+#storeContent {
+  padding-top: 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
 #app-flex-col {
-  padding-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -797,6 +825,36 @@ body.mobile-nav-active #mobile-nav-toggle {
 #app-flex-row {
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 992px) {
+  #storeContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #screenshot {
+    width: 720px;
+    left: 0px;
+    background-position: middle center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #appicon {
+    height: 22vh;
+    width: 22vh;
+  }
+
+  #app-flex-row {
+    flex-direction: column;
+  }
+
+  #screenshot {
+    width: 540px;
+    background-size: 100%;
+    left: 0;
+  }
 }
 
 #portfolio #portfolio-wrapper {
