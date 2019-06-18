@@ -835,12 +835,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #screenshot {
     width: 720px;
-    left: 0px;
+    left: 30px;
     background-position: middle center !important;
   }
 }
 
 @media (max-width: 768px) {
+  #storeContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
   #appicon {
     height: 22vh;
     width: 22vh;
