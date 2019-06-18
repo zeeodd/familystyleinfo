@@ -213,14 +213,6 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-@media (max-width: 667px) {
-
-  #heroImg {
-    width: 30vw;
-  }
-
-}
-
 #hero h2 {
   color: #eee;
   margin-bottom: 50px;
@@ -1130,4 +1122,20 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   font-size: 13px;
   color: #ccc;
+}
+
+@media only screen and (orientation: landscape) {
+  #heroImg {
+    margin-top: 40px !important;;
+    width: 30vw !important;;
+  }
+
+  .btn-get-started {
+    margin: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  #heroSubtitle {
+    margin: 0 !important;
+  }
 }
