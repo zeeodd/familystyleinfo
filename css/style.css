@@ -191,6 +191,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #heroImg {
   width: 55vh;
+  padding-bottom: 30px;
 }
 
 #heroSubtitle {
@@ -198,7 +199,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   color: #fff;
   text-shadow: 3px 3px #555578;
-  margin-top: 20px;
 }
 
 @media (max-width: 768px) {
@@ -331,7 +331,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Paytone One', sans-serif;
   text-shadow: 2px 2px #555578;
   text-transform: uppercase;
-  font-size: 14px;
+  font-size: 20px;
   outline: none;
 }
 
@@ -512,6 +512,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 .section-header .section-title {
   font-family: 'Paytone One', sans-serif;
+  text-transform: uppercase;
   font-size: 32px;
   text-align: center;
   margin-bottom: 5px;
@@ -534,7 +535,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #gameplay {
   width: 600px;
   height: 400px;
-  box-shadow: 12px 12px #555578;
+  box-shadow: 10px 10px rgba(1, 1, 1, 0.25);
 }
 
 #about .about-container .title {
@@ -545,6 +546,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #aboutTitle {
   font-family: 'Paytone One', sans-serif;
   color: #38761d;
+  text-transform: uppercase;
 }
 
 @media (max-width: 1280px) {
@@ -775,16 +777,17 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #portfolio .section-title {
   color: #d7a200;
+  text-transform: uppercase;
 }
 
 #screenshot {
   position: relative;
   top: 0;
-  left: 300px;
-  width: 700px;
+  left: 110px;
+  width: 1176px;
   height: 400px;
   float: right;
-  background-image: url("https://www.sccpre.cat/mypng/full/96-960892_cellphone-or-tablet-horizontal-position-screen-visualization-display.png");
+  background-image: url("../img/screenshot.png");
   background-size: auto 100%;
   background-position: bottom left !important;
   background-repeat: no-repeat;
@@ -797,8 +800,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .appbtn {
   width: 30vh;
-  height: 30vh;
   padding: 0.5rem;
+  padding-top: 3rem;
   transition: all 0.25s ease-in-out;
 }
 
@@ -835,6 +838,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #screenshot {
     width: 720px;
+    height: 337px;
     left: 30px;
     background-position: middle center !important;
   }
@@ -949,52 +953,57 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* Team Section
 --------------------------------*/
 #team {
-  background: #fff;
+  background: #BEB1E6;
   padding: 80px 0 60px 0;
 }
 
+#team .row {
+  justify-content: center !important;
+  padding-bottom: 30px;
+}
+
+#team .section-title {
+  color: #674ea7;
+}
+
 #team .member {
+  color: #674ea7;
+  font-family: 'Paytone One', sans-serif;
   text-align: center;
   margin-bottom: 20px;
+}
+
+#team .member span {
+  color: black;
 }
 
 #team .member .pic {
   margin-bottom: 15px;
   overflow: hidden;
   height: 260px;
+  box-shadow: 8px 8px rgba(1, 1, 1, 0.25);
 }
 
 #team .member .pic img {
+  box-shadow: 8px 8px rgba(1, 1, 1, 0.25);
   max-width: 100%;
 }
 
 #team .member h4 {
   font-weight: 700;
   margin-bottom: 2px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #team .member span {
-  font-style: italic;
   display: block;
-  font-size: 13px;
+  font-size: 16px;
 }
 
 #team .member .social {
-  margin-top: 15px;
-}
-
-#team .member .social a {
-  color: #b3b3b3;
-}
-
-#team .member .social a:hover {
-  color: #2dc997;
-}
-
-#team .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
+  font-style: italic;
+  color: black;
+  margin-top: 10px;
 }
 
 /* Contact Section
@@ -1107,10 +1116,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  background: #343b40;
+  background: rgba(73, 73, 97, 1);
+  font-family: 'Paytone One', sans-serif;
   padding: 30px 0;
   color: #fff;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 #footer .copyright {
