@@ -970,4 +970,34 @@ body.mobile-nav-active #mobile-nav-toggle {
   #heroSubtitle {
     margin: 0 !important;
   }
+
+  #footer .container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  #storeContent {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #appicon {
+    height: 25vw;
+    width: 25vw;
+  }
+
+  #app-flex-row {
+    flex-direction: row;
+  }
+
+  #screenshot {
+    width: 540px;
+    background-size: 100%;
+  }
+
+  .appbtn {
+    width: 28vw;
+    padding: 0.5rem;
+    padding-top: 3rem;
+  }
 }
