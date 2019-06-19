@@ -982,8 +982,8 @@ body.mobile-nav-active #mobile-nav-toggle {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  height: 260px;
-  width: 260px;
+  height: 200px;
+  width: 200px;
   box-shadow: 8px 8px rgba(1, 1, 1, 0.25);
 }
 
@@ -1006,7 +1006,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 #team .member .social {
   font-style: italic;
   color: black;
-  margin-top: 10px;
 }
 
 /* Contact Section
