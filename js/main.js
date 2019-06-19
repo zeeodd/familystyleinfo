@@ -126,5 +126,13 @@ jQuery(document).ready(function ($) {
   });
 
   // custom code
+  $(".appbtn").click(function() {
+    $("#comingsoon").addClass("animated");
+    $("#comingsoon").addClass("shake");
+    setTimeout(function() {
+      $("#comingsoon").removeClass("animated");
+      $("#comingsoon").removeClass("shake");
+    }, 1100);
+  })
 
 });
