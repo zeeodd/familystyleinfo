@@ -982,6 +982,9 @@ body.mobile-nav-active #mobile-nav-toggle {
     display: flex;
     flex-direction: row;
   }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 980px) {
 
   #storeContent {
     flex-direction: column;
