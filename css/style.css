@@ -942,6 +942,14 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: auto;
 }
 
+#footerWords a {
+  color: #1DA1F2 !important;
+}
+
+#footerWords a:hover {
+  color: #1DA1F2 !important;
+}
+
 @media (max-width: 768px) {
   #footer .container {
     display: flex;
