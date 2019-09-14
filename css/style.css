@@ -100,7 +100,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 1024px) {
   #header #logo h1 {
-    font-size: 30px;
+    font-size: 16px;
+    text-shadow: 2px 2px #555578;
   }
 }
 
@@ -284,6 +285,13 @@ h1, h2, h3, h4, h5, h6 {
 #nav-menu-container {
   float: right;
   margin: 0;
+}
+
+@media (max-width: 1024px) {
+
+  #nav-menu-container {
+    /* float: left; */
+  }
 }
 
 @media (max-width: 768px) {
@@ -487,6 +495,75 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   padding-bottom: 40px;
   color: black;
+}
+
+/*--------------------------------------------------------------
+# KICKSTARTER
+--------------------------------------------------------------*/
+
+#kickstarter {
+  background: #2b2727;
+  padding: 60px 0;
+}
+
+#kickstarterTitle {
+  font-family: 'Paytone One', sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+
+#kickstarter p {
+  color: #BEB1E6;
+}
+
+#kickstarter .row {
+  display: block;
+  text-align: center;
+}
+
+#kickstarter a {
+  color: #05ce78;
+  font-size: 30px;
+  transition: 0.25s;
+}
+
+#kickstarter a:hover {
+  text-decoration: underline;
+  transition: 0.25s;
+}
+
+#countdown {
+  font-size: 30px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+#hourglass {
+  height: 30px;
+  margin-bottom: 4px;
+}
+
+#donor-row {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.donor-col {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  color: #05ce78;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #kickstarter a {
+    font-size: 20px;
+  }
 }
 
 /*--------------------------------------------------------------

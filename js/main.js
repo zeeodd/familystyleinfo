@@ -130,6 +130,9 @@ jQuery(document).ready(function ($) {
     var heroSection = document.getElementById('hero');
     var heroSectionTop = heroSection.getBoundingClientRect().top;
 
+    var kickSection = document.getElementById('kickstarter');
+    var kickSectionTop = kickSection.getBoundingClientRect().top - OFFSET;
+
     var aboutSection = document.getElementById('about');
     var aboutSectionTop = aboutSection.getBoundingClientRect().top - OFFSET;
 
@@ -142,14 +145,22 @@ jQuery(document).ready(function ($) {
     var teamSection = document.getElementById('team');
     var teamSectionTop = teamSection.getBoundingClientRect().top - OFFSET;
 
+    if (kickSectionTop <= navBarHeight) {
+      document.getElementById('kickstarterNav').classList.add('sfHover', 'menu-active');
+    } else if (kickSectionTop >= navBarHeight) {
+      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
+    }
+
     if (aboutSectionTop <= navBarHeight) {
       document.getElementById('aboutNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
     } else if (aboutSectionTop >= navBarHeight) {
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
     }
 
     if (featureSectionTop <= navBarHeight) {
       document.getElementById('featureNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
     } else if (featureSectionTop >= navBarHeight) {
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
@@ -157,6 +168,7 @@ jQuery(document).ready(function ($) {
 
     if (downloadSectionTop <= navBarHeight) {
       document.getElementById('downloadNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
     } else if (downloadSectionTop >= navBarHeight) {
@@ -165,6 +177,7 @@ jQuery(document).ready(function ($) {
 
     if (teamSectionTop <= navBarHeight) {
       document.getElementById('teamNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('downloadNav').classList.remove('sfHover', 'menu-active');
@@ -173,5 +186,35 @@ jQuery(document).ready(function ($) {
     }
 
   }
+
+  // Countdown Timer
+  // Set the date we're counting down to
+  var countDownDate = new Date("Oct 14, 2019 15:30:00").getTime();
+
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+
+    // Get today's date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Display the result in the element with id="demo"
+    document.getElementById("countdown").innerHTML = "<img id='hourglass' src='img/hourglass.png' alt='Hourglass'> " + days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is finished, write some text
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+  }, 1000);
 
 });
