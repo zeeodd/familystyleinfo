@@ -532,6 +532,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: 0.25s;
 }
 
+#kickstarter-description {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
 #countdown {
   font-size: 30px;
   text-align: center;
