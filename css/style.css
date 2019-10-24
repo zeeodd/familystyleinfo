@@ -1131,3 +1131,32 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-right: 400px;
   }
 }
+
+/*--------------------------------------------------------------
+# PRIVACY.HTML
+--------------------------------------------------------------*/
+
+#privacy {
+  background: #B6DE8A;
+  padding: 150px 0;
+  text-align: justify;
+}
+
+#privacyDiv {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#privacyText {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.privacyHeader {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 28px;
+  color: #38761d;
+  text-transform: uppercase;
+}
