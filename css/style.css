@@ -41,6 +41,15 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.5s;
 }
 
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 15px;
@@ -162,6 +171,22 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 30px;
 }
 
+#heroAwardParent {
+  position: absolute;
+  right: 5vw;
+  transition: all 0.25s ease-in-out;
+}
+
+#heroAwardParent:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease-in-out;
+}
+
+#heroAward {
+  transform: rotate(5deg);
+  width: 20vw;
+}
+
 #heroSubtitle {
   font-family: 'Paytone One', sans-serif;
   font-size: 20px;
@@ -215,6 +240,10 @@ h1, h2, h3, h4, h5, h6 {
   #heroImg {
     width: 70vw;
   }
+
+  #heroAward {
+    width: 15vw !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -222,6 +251,11 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
+  }
+
+  #heroAward {
+    width: 25vw !important;
+    padding-top: 15vh;
   }
 }
 
@@ -508,7 +542,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #kickstarterTitle {
   font-family: 'Paytone One', sans-serif;
-  color: white;
+  color: #05ce78;
   text-transform: uppercase;
 }
 
@@ -1090,8 +1124,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media only screen and (orientation: landscape) {
   #heroImg {
-    margin-top: 40px !important;;
-    width: 30vw !important;;
+    margin-top: 40px !important;
+    width: 30vw !important;
+  }
+
+  #header #logo {
+    position: absolute;
   }
 
   .btn-get-started {

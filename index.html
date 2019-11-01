@@ -34,7 +34,7 @@
   HEADER
   ============================-->
   <header id="header">
-    <div class="container">
+    <div class="container noselect">
 
       <div id="logo" class="pull-left">
         <h1><a href="#hero">Family Style</a></h1>
@@ -58,11 +58,12 @@
   <!--==========================
     HERO SECTION
   ============================-->
-  <section id="hero">
+  <section id="hero" class="noselect">
     <div class="hero-container">
       <img id="heroImg" class="animated pulse infinite" src="img/FamilyStyle2DDrop.png" alt="Family Style Logo">
       <p id="heroSubtitle"> By Chef Party </p>
       <a href="#about" class="btn-get-started">Get Cookin'</a>
+      <a id="heroAwardParent" href="https://gdiac.cis.cornell.edu/courses/showcase.php" target="blank_"><img id="heroAward" class="animated zoomIn" src="img/award.png" alt="Family Style Logo"></a>
     </div>
   </section>
 
@@ -91,7 +92,7 @@
           </div>
 
           <div class="col-lg-6 background order-lg-2 order-1 wow fadeInRight">
-            <iframe id="gameplay" src="https://www.youtube.com/embed/GO4m7WBxLtQ" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe></iframe>
+            <iframe id="gameplay" src="https://www.youtube.com/embed/2sggPvd1N3M" frameborder="0" allow="encrypted-media;" allowfullscreen></iframe></iframe>
           </div>
         </div>
 
@@ -171,7 +172,7 @@
       <div class="container">
 
         <div class="section-header">
-          <h3 id="comingsoon" class="section-title">Available Soon!</h3>
+          <h3 id="comingsoon" class="section-title">Available Now!</h3>
         </div>
 
         <div class="row">
@@ -180,8 +181,9 @@
             <div id="app-flex-col" class="wow flipInX">
               <img id="appicon" class="animated tada infinite" src="img/appicon.png" alt="Family Style App Icon">
               <div id="app-flex-row">
-                <a href="#download"><img class="appbtn" src="img/iosbtn.png" alt="iOS App Download Button"></a>
-                <a href="#download"><img class="appbtn" src="img/androidbtn.png" alt="Android App Download Button"></a>
+                <!-- TODO: Change File -->
+                <a href="http://bit.ly/famstyios" target="_blank"><img class="appbtn" src="img/iosbtn.png" alt="iOS App Download Button"></a>
+                <a href="http://bit.ly/famstyandroid" target="_blank"><img class="appbtn" src="img/androidbtn.png" alt="Android App Download Button"></a>
               </div>
             </div>
             <span id="screenshot" class="wow fadeInRight"></span>
@@ -214,7 +216,7 @@
               <h4>Ziyad Durón</h4>
               <span>Artist, UI Designer</span>
               <div class="social">
-                ziyad@familystyle.info
+                <a href = "mailto: ziyad@familystyle.info">ziyad@familystyle.info</a>
               </div>
             </div>
           </div>
@@ -225,7 +227,7 @@
               <h4>Ryan Feldman</h4>
               <span>Gameplay Engineer</span>
               <div class="social">
-                ryan@familystyle.info
+                <a href = "mailto: ryan@familystyle.info">ryan@familystyle.info</a>
               </div>
             </div>
           </div>
@@ -236,7 +238,7 @@
               <h4>Jacob Gleberman</h4>
               <span>Network Architect</span>
               <div class="social">
-                jacob@familystyle.info
+                <a href = "mailto: jacob@familystyle.info">jacob@familystyle.info</a>
               </div>
             </div>
           </div>
@@ -251,7 +253,7 @@
               <h4>Sameer Khoja</h4>
               <span>Analytics Engineer</span>
               <div class="social">
-                sameer@familystyle.info
+                <a href = "mailto: sameer@familystyle.info">sameer@familystyle.info</a>
               </div>
             </div>
           </div>
@@ -262,7 +264,7 @@
               <h4>Gabe Lane</h4>
               <span>Artist, Gameplay Designer</span>
               <div class="social">
-                gabe@familystyle.info
+                <a href = "mailto: gabe@familystyle.info">gabe@familystyle.info</a>
               </div>
             </div>
           </div>
@@ -273,7 +275,7 @@
               <h4>Rena Ryumae</h4>
               <span>UI Engineer</span>
               <div class="social">
-                rena@familystyle.info
+                <a href = "mailto: rena@familystyle.info">rena@familystyle.info</a>
               </div>
             </div>
           </div>
@@ -284,13 +286,19 @@
               <h4>Jeremy Storey</h4>
               <span>Gameplay Engineer</span>
               <div class="social">
-                jeremy@familystyle.info
+                <a href = "mailto: jeremy@familystyle.info">jeremy@familystyle.info</a>
               </div>
             </div>
           </div>
 
         </div>
 
+      </div>
+
+      <div class="section-header">
+        <p class="section-description">
+          Contact us at <a href = "mailto: chefparty@familystyle.info"><i>chefparty@familystyle.info</i></a>
+        </p>
       </div>
     </section>
 
@@ -310,27 +318,61 @@
             <br/>
             <br/>
             💕 Chef Party
+            <br/>
+            <br/>
           </p>
         </div>
 
-        <!-- <div class="row">
-          <p class="section-description">
-            <a href="http://kck.st/2Q8KiGc" target="_blank">kickstarter.com/familystyle</a>
-          </p>
-        </div> -->
+        <!-- <div class="section-header">
+          <h3 id="kickstarterTitle" class="section-title">Donor Hall Of Fame</h3>
+        </div>
 
-        <!-- <div id="donor-row" class="row">
+        <div id="donor-row" class="row">
           <div class="donor-col">
             Donor Name 1 </br>
-            Donor Name 4
+            Donor Name 4 </br>
+            Donor Name 7 </br>
+            Donor Name 10 </br>
+            Donor Name 13 </br>
+            Donor Name 16 </br>
+            Donor Name 19 </br>
+            Donor Name 22 </br>
+            Donor Name 25 </br>
+            Donor Name 28 </br>
+            Donor Name 31 </br>
+            Donor Name 34 </br>
+            Donor Name 37 </br>
+            Donor Name 40
           </div>
           <div class="donor-col">
             Donor Name 2 </br>
-            Donor Name 5
+            Donor Name 5 </br>
+            Donor Name 8 </br>
+            Donor Name 11 </br>
+            Donor Name 14 </br>
+            Donor Name 17 </br>
+            Donor Name 20 </br>
+            Donor Name 23 </br>
+            Donor Name 26 </br>
+            Donor Name 29 </br>
+            Donor Name 32 </br>
+            Donor Name 35 </br>
+            Donor Name 38 </br>
           </div>
           <div class="donor-col">
             Donor Name 3 </br>
-            Donor Name 6
+            Donor Name 6 </br>
+            Donor Name 9 </br>
+            Donor Name 12 </br>
+            Donor Name 15 </br>
+            Donor Name 18 </br>
+            Donor Name 21 </br>
+            Donor Name 24 </br>
+            Donor Name 27 </br>
+            Donor Name 30 </br>
+            Donor Name 33 </br>
+            Donor Name 36 </br>
+            Donor Name 39 </br>
           </div>
         </div> -->
 
@@ -341,7 +383,7 @@
     FOOTER
   ============================-->
   <footer id="footer">
-    <div class="container">
+    <div class="container noselect">
 
       <img class="ingredients" src="img/ingred2.png" alt="Fish Ingredient">
 

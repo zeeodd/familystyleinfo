@@ -130,9 +130,6 @@ jQuery(document).ready(function ($) {
     var heroSection = document.getElementById('hero');
     var heroSectionTop = heroSection.getBoundingClientRect().top;
 
-    var kickSection = document.getElementById('kickstarter');
-    var kickSectionTop = kickSection.getBoundingClientRect().top - OFFSET;
-
     var aboutSection = document.getElementById('about');
     var aboutSectionTop = aboutSection.getBoundingClientRect().top - OFFSET;
 
@@ -145,22 +142,17 @@ jQuery(document).ready(function ($) {
     var teamSection = document.getElementById('team');
     var teamSectionTop = teamSection.getBoundingClientRect().top - OFFSET;
 
-    if (kickSectionTop <= navBarHeight) {
-      document.getElementById('kickstarterNav').classList.add('sfHover', 'menu-active');
-    } else if (kickSectionTop >= navBarHeight) {
-      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
-    }
+    var kickSection = document.getElementById('kickstarter');
+    var kickSectionTop = kickSection.getBoundingClientRect().top - OFFSET;
 
     if (aboutSectionTop <= navBarHeight) {
       document.getElementById('aboutNav').classList.add('sfHover', 'menu-active');
-      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
     } else if (aboutSectionTop >= navBarHeight) {
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
     }
 
     if (featureSectionTop <= navBarHeight) {
       document.getElementById('featureNav').classList.add('sfHover', 'menu-active');
-      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
     } else if (featureSectionTop >= navBarHeight) {
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
@@ -168,7 +160,6 @@ jQuery(document).ready(function ($) {
 
     if (downloadSectionTop <= navBarHeight) {
       document.getElementById('downloadNav').classList.add('sfHover', 'menu-active');
-      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
     } else if (downloadSectionTop >= navBarHeight) {
@@ -177,12 +168,21 @@ jQuery(document).ready(function ($) {
 
     if (teamSectionTop <= navBarHeight) {
       document.getElementById('teamNav').classList.add('sfHover', 'menu-active');
-      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('downloadNav').classList.remove('sfHover', 'menu-active');
     } else if (teamSectionTop >= navBarHeight) {
       document.getElementById('teamNav').classList.remove('sfHover', 'menu-active');
+    }
+
+    if (kickSectionTop <= navBarHeight) {
+      document.getElementById('kickstarterNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('teamNav').classList.remove('sfHover', 'menu-active');
+      document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
+      document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
+      document.getElementById('downloadNav').classList.remove('sfHover', 'menu-active');
+    } else if (kickSectionTop >= navBarHeight) {
+      document.getElementById('kickstarterNav').classList.remove('sfHover', 'menu-active');
     }
 
   }
