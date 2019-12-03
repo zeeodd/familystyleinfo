@@ -171,20 +171,32 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 30px;
 }
 
-#heroAwardParent {
+#appleAward {
   position: absolute;
-  right: 5vw;
+  left: 5vw;
+  transform: rotate(-5deg);
   transition: all 0.25s ease-in-out;
 }
 
-#heroAwardParent:hover {
+#gdiacAward {
+  position: absolute;
+  right: 5vw;
+  transform: rotate(5deg);
+  transition: all 0.25s ease-in-out;
+}
+
+#appleAward:hover {
   transform: scale(1.05);
   transition: all 0.25s ease-in-out;
 }
 
-#heroAward {
-  transform: rotate(5deg);
-  width: 20vw;
+#gdiacAward:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease-in-out;
+}
+
+.heroAward {
+  width: 18vw;
 }
 
 #heroSubtitle {
@@ -241,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 70vw;
   }
 
-  #heroAward {
+  .heroAward {
     width: 15vw !important;
   }
 }
@@ -253,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 30px;
   }
 
-  #heroAward {
+  .heroAward {
     width: 25vw !important;
     padding-top: 15vh;
   }
@@ -1125,7 +1137,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (orientation: landscape) {
   #heroImg {
     margin-top: 40px !important;
-    width: 30vw !important;
+    width: 40vw !important;
   }
 
   #header #logo {
