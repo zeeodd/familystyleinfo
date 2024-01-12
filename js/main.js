@@ -130,6 +130,9 @@ jQuery(document).ready(function ($) {
     var heroSection = document.getElementById('hero');
     var heroSectionTop = heroSection.getBoundingClientRect().top;
 
+    var fs2Section = document.getElementById('fs2teaser');
+    var fs2SectionTop = heroSection.getBoundingClientRect().top;
+
     var aboutSection = document.getElementById('about');
     var aboutSectionTop = aboutSection.getBoundingClientRect().top - OFFSET;
 
@@ -139,20 +142,28 @@ jQuery(document).ready(function ($) {
     var downloadSection = document.getElementById('download');
     var downloadSectionTop = downloadSection.getBoundingClientRect().top - OFFSET;
 
-    var teamSection = document.getElementById('team');
-    var teamSectionTop = teamSection.getBoundingClientRect().top - OFFSET;
+    // var teamSection = document.getElementById('team');
+    // var teamSectionTop = teamSection.getBoundingClientRect().top - OFFSET;
 
     var kickSection = document.getElementById('kickstarter');
     var kickSectionTop = kickSection.getBoundingClientRect().top - OFFSET;
 
+    if (fs2SectionTop <= navBarHeight) {
+      document.getElementById('fs2teaser').classList.add('sfHover', 'menu-active');
+    } else if (aboutSectionTop >= navBarHeight) {
+      document.getElementById('fs2teaser').classList.remove('sfHover', 'menu-active');
+    }
+
     if (aboutSectionTop <= navBarHeight) {
       document.getElementById('aboutNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('fs2teaser').classList.remove('sfHover', 'menu-active');
     } else if (aboutSectionTop >= navBarHeight) {
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
     }
 
     if (featureSectionTop <= navBarHeight) {
       document.getElementById('featureNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('fs2teaser').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
     } else if (featureSectionTop >= navBarHeight) {
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
@@ -160,24 +171,27 @@ jQuery(document).ready(function ($) {
 
     if (downloadSectionTop <= navBarHeight) {
       document.getElementById('downloadNav').classList.add('sfHover', 'menu-active');
+      document.getElementById('fs2teaser').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
     } else if (downloadSectionTop >= navBarHeight) {
       document.getElementById('downloadNav').classList.remove('sfHover', 'menu-active');
     }
 
-    if (teamSectionTop <= navBarHeight) {
-      document.getElementById('teamNav').classList.add('sfHover', 'menu-active');
-      document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
-      document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
-      document.getElementById('downloadNav').classList.remove('sfHover', 'menu-active');
-    } else if (teamSectionTop >= navBarHeight) {
-      document.getElementById('teamNav').classList.remove('sfHover', 'menu-active');
-    }
+    // if (teamSectionTop <= navBarHeight) {
+    //   document.getElementById('teamNav').classList.add('sfHover', 'menu-active');
+    //   document.getElementById('fs2teaser').classList.remove('sfHover', 'menu-active');
+    //   document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
+    //   document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
+    //   document.getElementById('downloadNav').classList.remove('sfHover', 'menu-active');
+    // } else if (teamSectionTop >= navBarHeight) {
+    //   document.getElementById('teamNav').classList.remove('sfHover', 'menu-active');
+    // }
 
     if (kickSectionTop <= navBarHeight) {
       document.getElementById('kickstarterNav').classList.add('sfHover', 'menu-active');
-      document.getElementById('teamNav').classList.remove('sfHover', 'menu-active');
+      // document.getElementById('teamNav').classList.remove('sfHover', 'menu-active');
+      document.getElementById('fs2teaser').classList.remove('sfHover', 'menu-active');
       document.getElementById('aboutNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('featureNav').classList.remove('sfHover', 'menu-active');
       document.getElementById('downloadNav').classList.remove('sfHover', 'menu-active');

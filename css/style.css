@@ -618,6 +618,114 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*--------------------------------------------------------------
+# FS2 TEASER
+--------------------------------------------------------------*/
+#fs2teaser {
+  background-image: url("../img/fs2/2024_Announcement_Discord_Fullsize.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  padding: 60px 0;
+}
+
+#fs2teaser .btn-get-started {
+  font-family: 'Paytone One', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-shadow: 2px 2px #555578;
+  box-shadow: 0px 3px #555578;
+}
+
+#fs2teaser .btn-get-started:hover {
+  text-shadow: 0px 0px #555578;
+  box-shadow: 0px 0px #555578;
+  background: #494961;
+  border: 2px solid #494961;
+}
+
+#fs2teaser .row {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#fs2teaser .box {
+  padding: 60px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 10px solid #B6ACD5;
+  border-radius: 25px;
+  height: 200px;
+  position: relative;
+  background: #494A60;
+  box-shadow: 6px 6px #555578;
+}
+
+#fs2teaser .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #B6ACD5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #494A60;
+}
+
+#fs2teaser .icon i {
+  color: #fff;
+  font-size: 30px;
+}
+
+#fs2teaser .title {
+  font-family: 'Paytone One', sans-serif;
+  color: #F8E71C;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#fs2teaser .description {
+  font-family: 'Paytone One', sans-serif;
+  color: #B6ACD5;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#fs2teaser .description  a {
+  color: #1DA1F2 !important;
+}
+
+#fs2teaser .description  a:hover {
+  color: #1DA1F2 !important;
+}
+
+@media (max-width: 768px) {
+  #fs2teaser {
+    background-image: url("../img/fs2/2024_Announcement_IG_Story.webp");
+  }
+}
+
+/*--------------------------------------------------------------
 # ABOUT
 --------------------------------------------------------------*/
 #about {
@@ -1127,6 +1235,176 @@ body.mobile-nav-active #mobile-nav-toggle {
 @media only screen and (orientation: portrait) {
   #privacy {
     text-align: left;
+  }
+}
+
+/*--------------------------------------------------------------
+# DEV LOG
+--------------------------------------------------------------*/
+
+#devlog {
+  background-image: url("../img/fs2/newbg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  padding: 100px 0;
+  text-align: justify;
+}
+
+#devlogDiv {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+#devlogText {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.devlogTitle {
+  text-align:center;
+  font-size: 36px;
+  margin: 15px;
+  padding-bottom: 10px;
+  line-height: 0.6;
+  font-family: 'Sigmar One';
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0px;
+  text-shadow: 2px 5px #555578;
+}
+
+.collapsible {
+  background-color: #555578;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  outline: none;
+}
+
+.collapsible-header {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 20px;
+  color: white;
+}
+
+.active, .collapsible:hover {
+  background-color: #494961;
+}
+
+.collapsible:after {
+  content: "🍅";
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible:focus {
+    outline: none;
+}
+
+.active:after {
+  content: "🥑";
+}
+
+#devlog .content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow-y: scroll;
+  line-height: 1;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+#devlog .content p {
+  width: 100%;
+  text-align: left;
+}
+
+#devlog .content .date {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: grey;
+}
+
+.devlog-btn {
+  font-family: 'Paytone One', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-shadow: 2px 2px #555578;
+  box-shadow: 0px 3px #555578;
+}
+
+.devlog-btn:hover {
+  color: #fff;
+  text-shadow: 0px 0px #555578;
+  box-shadow: 0px 0px #555578;
+  background: #494961;
+  border: 2px solid #494961;
+}
+
+.highlight {
+  color: #eb9898;
+}
+
+.devlogImage {
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  #devlogDiv {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  .devlogTitle {
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: 3px 3px #555578;
+  }
+
+  .collapsible-header {
+    font-size: 16px;
+  }
+
+  .collapsible {
+    padding: 12px 18px;
+  }
+
+  .devlogImage {
+    width: 100%;
+    height: auto;
   }
 }
 
