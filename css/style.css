@@ -1253,6 +1253,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   height: 100vh;
   padding: 100px 0;
   text-align: justify;
+  overflow-y: scroll;
 }
 
 #devlogDiv {
@@ -1339,6 +1340,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: left;
 }
 
+#devlog .content .caption {
+  text-align: center;
+}
+
 #devlog .content .date {
   margin-top: 18px;
   margin-bottom: 18px;
@@ -1373,6 +1378,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .highlight {
   color: #eb9898;
+}
+
+.caption {
+  color: #eb9898;
+  font-size: 14px;
 }
 
 .devlogImage {
