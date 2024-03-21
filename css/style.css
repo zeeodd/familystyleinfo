@@ -1390,6 +1390,23 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 30px;
 }
 
+.devlogImageFullWidth {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.devlogImageFlexDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.devlogImageRow {
+  height: 250px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 768px) {
   #devlogDiv {
     width: 98%;
@@ -1415,6 +1432,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   .devlogImage {
     width: 100%;
     height: auto;
+  }
+
+  .devlogImageFlexDiv {
+    flex-direction: column;
   }
 }
 
