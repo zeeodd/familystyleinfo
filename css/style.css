@@ -1337,6 +1337,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #devlog .content p {
   width: 100%;
+  line-height: 1.2;
   text-align: left;
 }
 
