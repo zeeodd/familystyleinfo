@@ -621,8 +621,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 # FS2 TEASER
 --------------------------------------------------------------*/
 #fs2teaser {
-  background-image: url("../img/fs2/2025_Announcement.webp");
-  background-position: center center;
+  background-image: url("../img/fs2/FamilyStyle2_TeaserBanner_2.webp");
+  background-position: right bottom;
   background-repeat: no-repeat;
   background-size: cover;
   -webkit-background-size: cover;
@@ -664,7 +664,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #fs2teaser .box {
   padding: 60px 20px;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   text-align: center;
   border: 10px solid #B6ACD5;
   border-radius: 25px;
@@ -720,9 +720,26 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 768px) {
-  #fs2teaser {
-    background-image: url("../img/fs2/2024_Announcement_IG_Story.webp");
+  .fs2teasercard {
+    margin-bottom: -150px;
   }
+}
+
+#fs2-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fs2-social-icon-a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fs2-social-icon {
+  height: 50px;
+  width: 50px;
+  color: #494A60;
 }
 
 /*--------------------------------------------------------------
