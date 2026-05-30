@@ -133,8 +133,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+  #header {
+    left: 0;
+    right: 0;
+  }
   #header #logo h1 {
-    font-size: 16px;
+    font-size: 28px;
   }
   #header #logo img {
     max-height: 40px;
@@ -739,7 +743,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 768px) {
   .fs2teasercard {
-    margin-bottom: -150px;
+    height: 400px;
+    margin-bottom: -250px;
   }
 }
 
@@ -769,6 +774,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #gameplay {
+  width: 600px;
+  height: 400px;
+  box-shadow: 10px 10px rgba(1, 1, 1, 0.25);
+}
+
+#teaser-trailer {
   width: 600px;
   height: 400px;
   box-shadow: 10px 10px rgba(1, 1, 1, 0.25);
@@ -850,6 +861,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 480px;
     height: 320px;
   }
+
+  #teaser-trailer {
+    width: 480px;
+    height: 320px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -859,7 +875,12 @@ body.mobile-nav-active #mobile-nav-toggle {
 
   #gameplay {
     width: 98%;
-    height: 320px;
+    height: 250px;
+  }
+
+  #teaser-trailer {
+    width: 98%;
+    height: 250px;
   }
 
   #about .ingredients {
