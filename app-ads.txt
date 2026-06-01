@@ -157,3 +157,5 @@ xandr.com, 17779, RESELLER
 xandr.com, 13799, RESELLER
 xandr.com, 15840, RESELLER
 facebook.com, 214052356269700, DIRECT, c3e20eee3f780d68
+pangleglobal.com, 5039539, DIRECT
+pubmatic.com, 161490, RESELLER, 5d62403b186f2ace
