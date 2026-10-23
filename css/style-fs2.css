@@ -1,0 +1,2258 @@
+/*--------------------------------------------------------------
+# GENERAL
+--------------------------------------------------------------*/
+:root {
+  --white: #eff1f6;
+  --blue: #5c7ca4;
+  --dark-blue: #2A457D;
+  --green: #7ba651;
+  --dark-green: #53771B;
+  --red: #bc6465;
+  --dark-red: #98474B;
+  --yellow: #f7b267;
+  --dark-yellow: #C57F38;
+}
+
+body {
+  background: #fff;
+  color: #666666;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 600;
+  overflow-x: hidden !important;
+  width: 100%;
+}
+
+a:hover, a:active, a:focus {
+  outline: none;
+  text-decoration: none;
+}
+
+p {
+  color: var(--white) !important;
+  font-weight: 900 !important;
+  padding: 0;
+  margin: 0 0 30px 0;
+  font-size: 20px;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  margin: 0 0 20px 0;
+  padding: 0;
+}
+
+/* Back to top button */
+.back-to-top {
+  position: fixed;
+  display: none;
+  background: rgba(73, 73, 97, 0.2);
+  color: #fff;
+  padding: 6px 12px 9px 12px;
+  font-size: 16px;
+  border-radius: 4px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 15px;
+  }
+}
+
+.back-to-top:focus {
+  background: rgba(73, 73, 97, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: rgba(73, 73, 97, 1);
+  color: #fff;
+}
+
+.shake-text {
+  display: inline-block;
+  font-size: 24px;
+  font-family: sans-serif;
+  animation: shake 1.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateY(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateY(-3px); }
+  20%, 40%, 60%, 80% { transform: translateY(3px); }
+}
+
+/*--------------------------------------------------------------
+# HEADER
+--------------------------------------------------------------*/
+#header-fs2 {
+  padding: 30px 0;
+  height: 90px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+  z-index: 997;
+}
+
+#header-fs2 #logo-fs2 {
+  float: left;
+}
+
+#header-fs2 #logo-fs2 h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 3px 0;
+  line-height: 0.6;
+  font-family: 'Sigmar One', cursive;
+  font-weight: 700;
+  letter-spacing: -4px;
+  text-shadow: 3px 3.5px var(--dark-blue);
+  -webkit-text-stroke: 2px var(--dark-blue);
+}
+
+#header-fs2 #logo-fs2 h1 a, #header-fs2 #logo-fs2 h1 a:hover {
+  color: #fff;
+}
+
+#header-fs2.header-fixed {
+  background: rgba(92, 124, 164, 0.9);
+  padding: 20px 0;
+  height: 72px;
+  transition: all 0.5s;
+}
+
+@media (max-width: 1200px) {
+  #header-fs2 #logo-fs2 h1 {
+    font-size: 20px;
+    text-shadow: 3px 3px #555578;
+  }
+
+  .nav-menu a {
+    font-size: 16px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  #header-fs2 #logo-fs2 h1 {
+    font-size: 16px;
+    text-shadow: 2px 2px #555578;
+  }
+  #header-fs2 {
+    left: 100px;
+    right: 0;
+  }
+  .nav-menu a {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #header-fs2 {
+    left: 0;
+    right: 0;
+  }
+  #header-fs2 #logo-fs2 h1 {
+    font-size: 28px;
+  }
+  #header-fs2 #logo-fs2 img {
+    max-height: 40px;
+  }
+}
+
+/*--------------------------------------------------------------
+# HERO
+--------------------------------------------------------------*/
+#hero-fs2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/fs2/VeggiePatternLargeWhite.png") center;
+  background-size: contain;
+  background-repeat: repeat;
+  position: relative;
+  background-color: #6183b0; /* The tint color */
+  background-blend-mode: multiply;
+  animation: bgScroll 20s linear infinite;
+}
+
+#hero-fs2:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+/* Define the scrolling movement */
+@keyframes bgScroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 400px 400px; /* Matches the tile size shift for a seamless loop */
+  }
+}
+
+#hero-fs2 .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero-fs2 h1 {
+  margin: 30px 0 10px 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* Individual Image Styling */
+#heroImg-fs2 {
+  width: 65vh; /* Adjusted slightly for better proportions */
+  z-index: 2;
+}
+
+#heroImg-star-fs2 {
+  margin-top: 100px;
+  opacity: 0.8;
+  width: 70vh; /* Adjusted slightly for better proportions */
+  z-index: 1;
+}
+
+/* 1. Use CSS Grid to automatically stack and center everything in the same space */
+.image-stack {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  position: relative;
+}
+
+/* 2. Force both images to occupy the exact same grid cell */
+.image-stack img {
+  grid-area: 1 / 1;
+  object-fit: contain;
+  pointer-events: none; /* Prevents invisible boundaries from blocking clicks */
+}
+
+#appleAward-fs2 {
+  position: absolute;
+  left: 5vw;
+  transform: rotate(-5deg);
+  transition: all 0.25s ease-in-out;
+}
+
+#gdiacAward-fs2 {
+  position: absolute;
+  right: 5vw;
+  transform: rotate(5deg);
+  transition: all 0.25s ease-in-out;
+}
+
+#appleAward-fs2:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease-in-out;
+}
+
+#gdiacAward-fs2:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease-in-out;
+}
+
+.heroAward {
+  width: 18vw;
+}
+
+#heroSubtitle-fs2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  color: #fff;
+  text-shadow: 2.5px 2.5px var(--dark-blue);
+}
+
+#hero-fs2 h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 24px;
+}
+
+#hero-fs2 .btn-get-started {
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.35s;
+  margin: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-shadow: 2px 2px var(--dark-blue);
+  box-shadow: 0px 5px var(--dark-blue);
+}
+
+#hero-fs2 .btn-get-started:hover {
+  text-shadow: 0px 0px var(--dark-blue);
+  box-shadow: 0px 0px var(--dark-blue);
+  background: var(--dark-blue);
+  border: 2px solid var(--dark-blue);
+}
+
+
+@media (min-width: 1024px) {
+  #hero-fs2 {
+    background-attachment: inherit;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-fs2 h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #heroImg-fs2 {
+    width: 70vw;
+  }
+
+  .heroAward {
+    width: 15vw !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero-fs2 h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+
+  .heroAward {
+    width: 25vw !important;
+    padding-top: 15vh;
+  }
+}
+
+/*--------------------------------------------------------------
+# NAVIGATION
+--------------------------------------------------------------*/
+.nav-menu, .nav-menu * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu ul {
+  position: absolute;
+  display: none;
+  top: 100%;
+  left: 0;
+  z-index: 99;
+}
+
+.nav-menu li {
+  position: relative;
+  white-space: nowrap;
+}
+
+.nav-menu > li {
+  float: left;
+}
+
+.nav-menu li:hover > ul,
+.nav-menu li.sfHover > ul {
+  display: block;
+}
+
+.nav-menu ul ul {
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu ul li {
+  min-width: 180px;
+}
+
+.sf-arrows .sf-with-ul {
+  padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+  content: "\f107";
+  position: absolute;
+  right: 15px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+  content: "\f105";
+}
+
+#nav-menu-container-fs2 {
+  float: right;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+
+  #nav-menu-container-fs2 {
+    /* float: right; */
+  }
+}
+
+@media (max-width: 768px) {
+  #nav-menu-container-fs2 {
+    display: none;
+  }
+}
+
+.nav-menu a {
+  padding: 0 8px 10px 4px;
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  text-shadow: 2px 2px var(--dark-blue);
+  text-transform: uppercase;
+  font-size: 20px;
+  outline: none;
+}
+
+.nav-menu > li {
+  margin-left: 10px;
+}
+
+.nav-menu > li > a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--white);
+  box-shadow: 2px 2px #555578;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .menu-active > a:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav-menu ul {
+  margin: 4px 0 0 0;
+  border: 1px solid #e7e7e7;
+}
+
+.nav-menu ul li {
+  background: #fff;
+}
+
+.nav-menu ul li:first-child {
+  border-top: 0;
+}
+
+.nav-menu ul li a {
+  padding: 10px;
+  color: #333;
+  transition: 0.3s;
+  display: block;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.nav-menu ul li a:hover {
+  background: #2dc997;
+  color: #fff;
+}
+
+.nav-menu ul ul {
+  margin: 0;
+}
+
+#mobile-nav-toggle-fs2 {
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  margin: 15px 20px 0 0;
+  border: 0;
+  background: none;
+  font-size: 28px;
+  display: none;
+  transition: all 0.4s;
+  outline: none;
+  cursor: pointer;
+  background-color: #555578;
+}
+
+#mobile-nav-toggle-fs2 i {
+  color: #fff;
+}
+
+#mobile-nav-fs2 {
+  position: fixed;
+  top: 0;
+  padding-top: 18px;
+  bottom: 0;
+  z-index: 998;
+  background: rgba(73, 73, 97, 0.9);
+  left: -260px;
+  width: 260px;
+  overflow-y: auto;
+  transition: 0.4s;
+}
+
+#mobile-nav-fs2 ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+#mobile-nav-fs2 ul li {
+  position: relative;
+}
+
+#mobile-nav-fs2 ul li a {
+  font-family: 'Noto Sans', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  overflow: hidden;
+  padding: 10px 22px 10px 15px;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  display: block;
+  outline: none;
+}
+
+#mobile-nav-fs2 ul li a:hover {
+  color: #fff;
+}
+
+#mobile-nav-fs2 ul li li {
+  padding-left: 30px;
+}
+
+#mobile-nav-fs2 ul .menu-has-children i {
+  position: absolute;
+  right: 0;
+  z-index: 99;
+  padding: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+#mobile-nav-fs2 ul .menu-has-children i.fa-chevron-up {
+  color: #2dc997;
+}
+
+#mobile-nav-fs2 ul .menu-item-active {
+  color: #2dc997;
+}
+
+#mobile-body-overly-fs2 {
+  width: 100%;
+  height: 100%;
+  z-index: 997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(52, 59, 64, 0.9);
+  display: none;
+}
+
+body.mobile-nav-active {
+  overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav-fs2 {
+  left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle-fs2 {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  #mobile-nav-toggle-fs2 {
+    display: inline;
+  }
+}
+
+/*--------------------------------------------------------------
+# SECTION CLASSES
+--------------------------------------------------------------*/
+.section-header .section-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.section-header .section-description {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 40px;
+  color: black;
+}
+
+/*--------------------------------------------------------------
+# KICKSTARTER
+--------------------------------------------------------------*/
+
+#kickstarter-fs2 {
+  background: #2b2727;
+  padding: 60px 0;
+}
+
+#kickstarterTitle-fs2 {
+  font-family: 'Noto Sans', sans-serif;
+  color: #05ce78;
+  text-transform: uppercase;
+}
+
+#kickstarter-fs2 p {
+  color: #BEB1E6;
+}
+
+#kickstarter-fs2 .row {
+  display: block;
+  text-align: center;
+}
+
+#kickstarter-fs2 a {
+  color: #05ce78;
+  font-size: 30px;
+  transition: 0.25s;
+}
+
+#kickstarter-fs2 a:hover {
+  text-decoration: underline;
+  transition: 0.25s;
+}
+
+#kickstarter-description-fs2 {
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+#countdown-fs2 {
+  font-size: 30px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+#hourglass-fs2 {
+  height: 30px;
+  margin-bottom: 4px;
+}
+
+#donor-row-fs2 {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.donor-col {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  color: #05ce78;
+  font-size: 20px;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  #kickstarter-fs2 a {
+    font-size: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# FS2 TEASER
+--------------------------------------------------------------*/
+#fs2teaser {
+  background-image: url("../img/fs2/FamilyStyle2_TeaserBanner_2.webp");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  padding: 60px 0;
+}
+
+#fs2teaser .btn-get-started {
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-shadow: 2px 2px #555578;
+  box-shadow: 0px 3px #555578;
+}
+
+#fs2teaser .btn-get-started:hover {
+  text-shadow: 0px 0px #555578;
+  box-shadow: 0px 0px #555578;
+  background: #494961;
+  border: 2px solid #494961;
+}
+
+#fs2teaser .row {
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#fs2teaser .box {
+  padding: 60px 20px;
+  margin-bottom: 25px;
+  text-align: center;
+  border: 10px solid #B6ACD5;
+  border-radius: 25px;
+  height: 200px;
+  position: relative;
+  background: #494A60;
+  box-shadow: 6px 6px #555578;
+}
+
+#fs2teaser .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid #B6ACD5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: #494A60;
+}
+
+#fs2teaser .icon i {
+  color: #fff;
+  font-size: 30px;
+}
+
+#fs2teaser .title {
+  font-family: 'Noto Sans', sans-serif;
+  color: #F8E71C;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#fs2teaser .description {
+  font-family: 'Noto Sans', sans-serif;
+  color: #B6ACD5;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#fs2teaser .description  a {
+  color: #1DA1F2 !important;
+}
+
+#fs2teaser .description  a:hover {
+  color: #1DA1F2 !important;
+}
+
+@media (max-width: 768px) {
+  .fs2teasercard {
+    height: 400px;
+    margin-bottom: -250px;
+  }
+}
+
+#fs2-socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fs2-social-icon-a {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fs2-social-icon {
+  height: 50px;
+  width: 50px;
+  color: #494A60;
+}
+
+/*--------------------------------------------------------------
+# ABOUT
+--------------------------------------------------------------*/
+#about-fs2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/fs2/WoodWhite.png") center;
+  background-size: cover;
+  position: relative;
+  background-color: #7ba651; /* The tint color */
+  background-blend-mode: multiply;
+  /* animation: bgScroll 20s linear infinite; */
+  padding: 60px 0;
+}
+
+#gameplay-fs2 {
+  width: 600px;
+  height: 400px;
+  box-shadow: 10px 10px rgba(1, 1, 1, 0.25);
+}
+
+#teaser-trailer-fs2 {
+  width: 600px;
+  height: 400px;
+  box-shadow: 10px 10px rgba(1, 1, 1, 0.25);
+}
+
+#about-fs2 .about-container .title {
+  font-weight: 700;
+  font-size: 32px;
+}
+
+#aboutTitle-fs2 {
+  font-family: 'Sigmar One', sans-serif;
+  font-size: 50px !important;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -5px;
+  text-shadow: 3px 3.5px var(--dark-green);
+  -webkit-text-stroke: 2px var(--dark-green);
+}
+
+#about-fs2 .about-container {
+  text-align: center;
+}
+
+#about-fs2 .about-container p {
+  font-family: 'Noto Sans', sans-serif;
+  line-height: 26px;
+  color: black;
+}
+
+#about-fs2 .about-container p:last-child {
+  margin-bottom: 0;
+}
+
+#about-fs2 .about-container .icon-box {
+  background-size: cover;
+  padding: 0 0 30px 0;
+}
+
+#about-fs2 .about-container .icon-box .icon {
+  float: left;
+  background: #fff;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #2dc997;
+}
+
+.ingredients {
+  height: 20vh;
+  filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, 0.25));
+}
+
+#about-tomato {
+  height: 21vh;
+}
+
+#about-lettuce {
+  height: 24vh;
+}
+
+#about-lemon {
+  height: 17vh;
+}
+
+#about-fs2 .about-container .icon-box .icon i {
+  color: #2dc997;
+  font-size: 24px;
+}
+
+#about-fs2 .about-container .icon-box .title {
+  margin-left: 80px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+#about-fs2 .about-container .icon-box .title a {
+  color: #111;
+}
+
+#about-fs2 .about-container .icon-box .description {
+  margin-left: 80px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+@media (max-width: 1280px) {
+  #gameplay-fs2 {
+    width: 480px;
+    height: 320px;
+  }
+
+  #teaser-trailer-fs2 {
+    width: 480px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  #about-fs2 .about-container .title {
+    padding-top: 15px;
+  }
+
+  #gameplay-fs2 {
+    width: 98%;
+    height: 250px;
+  }
+
+  #teaser-trailer-fs2 {
+    width: 98%;
+    height: 250px;
+  }
+
+  #about-fs2 .ingredients {
+    height: 10vh;
+  }
+}
+
+/*--------------------------------------------------------------
+# FEATURES
+--------------------------------------------------------------*/
+#featureTitle-fs2 {
+  font-family: 'Sigmar One', sans-serif;
+  font-size: 50px !important;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -5px;
+  text-shadow: 3px 3.5px var(--dark-red);
+  -webkit-text-stroke: 2px var(--dark-red);
+}
+
+#features-fs2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/fs2/WoodWhite.png") center;
+  background-size: cover;
+  position: relative;
+  background-color: #bc6465; /* The tint color */
+  background-blend-mode: multiply;
+  /* animation: bgScroll 20s linear infinite; */
+  padding: 60px 0 60px 0;
+}
+
+#features-fs2 .section-header {
+  color: #3c78d8;
+}
+
+#features-fs2 .box {
+  padding: 60px 20px;
+  margin-bottom: 50px;
+  text-align: center;
+  border: 10px solid var(--dark-blue);
+  border-radius: 25px;
+  height: 200px;
+  position: relative;
+  background: var(--blue);
+  box-shadow: 7px 7px rgba(0, 0, 0, 0.25);
+}
+
+#features-fs2 .icon {
+  position: absolute;
+  top: -36px;
+  left: calc(50% - 36px);
+  transition: 0.2s;
+  border-radius: 50%;
+  border: 6px solid var(--dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  width: 72px;
+  height: 72px;
+  background: var(--blue);
+}
+
+#features-fs2 .icon i {
+  color: #fff;
+  font-size: 35px;
+}
+
+#features-fs2 .title {
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--dark-blue);
+  font-size: 25px;
+  margin-bottom: 5px !important;
+  text-transform: uppercase;
+}
+
+#features-fs2 .description {
+  font-family: 'Noto Sans', sans-serif;
+  color: #B6ACD5;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0px !important;
+}
+
+/*--------------------------------------------------------------
+# DOWNLOAD
+--------------------------------------------------------------*/
+#comingsoon-fs2 {
+  font-family: 'Sigmar One', sans-serif;
+  font-size: 50px !important;
+  text-transform: uppercase;
+  color: var(--white);
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: -5px;
+  text-shadow: 3px 3.5px var(--dark-yellow);
+  -webkit-text-stroke: 2px var(--dark-yellow);
+}
+
+#download-fs2 {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/fs2/WoodWhite.png") center;
+  background-size: cover;
+  position: relative;
+  background-color: #f7b267; /* The tint color */
+  background-blend-mode: multiply;
+  /* animation: bgScroll 20s linear infinite; */
+  padding: 60px 0;
+}
+
+#screenshot-fs2 {
+  position: relative;
+  top: 0;
+  left: 110px;
+  width: 1176px;
+  height: 400px;
+  float: right;
+  background-image: url("../img/fs2/FS2-Phone.png");
+  background-size: auto 100%;
+  background-position: bottom left !important;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  filter: drop-shadow(10px 10px 0px rgba(0,0,0,0.25));
+}
+
+#appicon-fs2 {
+  height: 30vh;
+  width: 30vh;
+  filter: drop-shadow(10px 10px 0px rgba(0, 0, 0, 0.25));
+  border-radius: 60px;     /* Set to 50% for a perfect circle */
+  object-fit: cover;
+}
+
+.appbtn {
+  width: 30vh;
+  padding: 0.5rem;
+  padding-top: 3rem;
+  transition: all 0.25s ease-in-out;
+}
+
+.appbtn:hover {
+  transform: scale(1.05);
+  transition: all 0.25s ease-in-out;
+}
+
+#storeContent-fs2 {
+  padding-top: 80px;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+#app-flex-col-fs2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#app-flex-row-fs2 {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 992px) {
+  #storeContent-fs2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #screenshot-fs2 {
+    width: 720px;
+    height: 337px;
+    left: 30px;
+    background-position: center !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #storeContent-fs2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #appicon-fs2 {
+    height: 22vh;
+    width: 22vh;
+  }
+
+  #app-flex-row-fs2 {
+    flex-direction: column;
+  }
+
+  #screenshot-fs2 {
+    width: 340px;
+    background-size: 100%;
+    left: 1vw;
+  }
+}
+
+#download-fs2 #download-wrapper-fs2 {
+  padding-right: 15px;
+}
+
+#download-fs2 #download-flters-fs2 {
+  padding: 0;
+  margin: 0 0 45px 0;
+  list-style: none;
+  text-align: center;
+}
+
+#download-fs2 #download-flters-fs2 li {
+  cursor: pointer;
+  margin: 0 10px;
+  display: inline-block;
+  padding: 10px 22px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: #fff;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+#download-fs2 #download-flters-fs2 li:hover, #download-fs2 #download-flters-fs2 li.filter-active {
+  background: #2dc997;
+  color: #fff;
+}
+
+#download-fs2 .download-item {
+  position: relative;
+  height: 200px;
+  overflow: hidden !important;
+  margin-bottom: 15px;
+  transition: all 350ms ease;
+  transform: scale(1);
+}
+
+#download-fs2 .download-item a {
+  display: block;
+  margin-right: 15px;
+}
+
+#download-fs2 .download-item img {
+  position: relative;
+  top: 0;
+  transition: all 600ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#download-fs2 .download-item .details {
+  height: 50px;
+  background: #2dc997;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  bottom: -50px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#download-fs2 .download-item .details h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  padding: 8px 0 2px 8px;
+  margin: 0;
+}
+
+#download-fs2 .download-item .details span {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  padding-left: 8px;
+}
+
+#download-fs2 .download-item:hover .details {
+  bottom: 0;
+}
+
+#download-fs2 .download-item:hover img {
+  top: -30px;
+}
+
+/*--------------------------------------------------------------
+# TEAM
+--------------------------------------------------------------*/
+#team-fs2 {
+  background: #BEB1E6;
+  padding: 80px 0 60px 0;
+}
+
+#team-fs2 .row {
+  justify-content: center !important;
+  padding-bottom: 30px;
+}
+
+#team-fs2 .section-title {
+  color: #674ea7;
+}
+
+#team-fs2 .member {
+  color: #674ea7;
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#team-fs2 .member span {
+  color: black;
+}
+
+#team-fs2 .member .pic {
+  margin-bottom: 15px;
+  /* overflow: hidden; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: 200px;
+  box-shadow: 8px 8px rgba(1, 1, 1, 0.25);
+}
+
+#team-fs2 .member .pic img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#team-fs2 .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 20px;
+}
+
+#team-fs2 .member span {
+  display: block;
+  font-size: 16px;
+}
+
+#team-fs2 .member .social {
+  font-style: italic;
+  color: black;
+}
+
+/*--------------------------------------------------------------
+# FOOTER
+--------------------------------------------------------------*/
+#footer-fs2 {
+  background: url("../img/fs2/VeggiePatternLargeWhite.png") center;
+  background-size: 800px;
+  background-repeat: repeat;
+  position: relative;
+  background-color: #6183b0; /* The tint color */
+  background-blend-mode: multiply;
+  animation: bgScroll 20s linear infinite;
+  font-family: 'Noto Sans', sans-serif;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+#footer-fs2 .container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#footerWords-fs2 {
+  display: flex;
+  flex-direction: column;
+}
+
+#footer-fs2 .copyright {
+  text-align: center;
+  font-weight: 900;
+}
+
+#footer-fs2 .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #ccc;
+}
+
+#footer-fs2 .ingredients {
+  width: 200px;
+  filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 0.25));
+  height: auto;
+}
+
+#footerWords-fs2 a {
+  color: var(--dark-blue) !important;
+}
+
+#footerWords-fs2 a:hover {
+  color: var(--dark-blue) !important;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  #footer-fs2 .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #footer-fs2 .ingredients {
+    width: 100px;
+    height: auto;
+  }
+
+  #footerWords-fs2 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+/*--------------------------------------------------------------
+# PRIVACY.HTML
+--------------------------------------------------------------*/
+
+#privacy-fs2 {
+  background: #B6DE8A;
+  padding: 150px 0;
+  text-align: justify;
+}
+
+#privacyDiv-fs2 {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#privacyText-fs2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.privacyHeader {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 28px;
+  color: #38761d;
+  text-transform: uppercase;
+}
+
+@media only screen and (orientation: portrait) {
+  #privacy-fs2 {
+    text-align: left;
+  }
+}
+
+/*--------------------------------------------------------------
+# DEV LOG
+--------------------------------------------------------------*/
+
+#devlog-fs2 {
+  background-image: url("../img/fs2/newbg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 100vh;
+  padding: 100px 0;
+  text-align: justify;
+  overflow-y: scroll;
+}
+
+#devlogDiv-fs2 {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+#devlogText-fs2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.devlogTitle {
+  text-align:center;
+  font-size: 36px;
+  margin: 15px;
+  padding-bottom: 10px;
+  line-height: 0.6;
+  font-family: 'Sigmar One';
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 0px;
+  text-shadow: 2px 5px #555578;
+}
+
+.collapsible {
+  background-color: #555578;
+  color: var(--white);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  outline: none;
+}
+
+.collapsible-header {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 20px;
+  color: var(--white);
+}
+
+.active, .collapsible:hover {
+  background-color: #494961;
+}
+
+.collapsible:after {
+  content: "🍅";
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.collapsible:focus {
+    outline: none;
+}
+
+.active:after {
+  content: "🥑";
+}
+
+#devlog-fs2 .content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow-y: scroll;
+  line-height: 1;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+}
+
+#devlog-fs2 .content p {
+  width: 100%;
+  line-height: 1.2;
+  text-align: left;
+}
+
+#devlog-fs2 .content .caption {
+  text-align: center;
+}
+
+#devlog-fs2 .content .date {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  font-size: 14px;
+  color: grey;
+}
+
+.devlog-btn {
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 50px;
+  transition: 0.5s;
+  margin: 30px;
+  border: 2px solid #fff;
+  color: #fff;
+  text-shadow: 2px 2px #555578;
+  box-shadow: 0px 3px #555578;
+}
+
+.devlog-btn:hover {
+  color: #fff;
+  text-shadow: 0px 0px #555578;
+  box-shadow: 0px 0px #555578;
+  background: #494961;
+  border: 2px solid #494961;
+}
+
+.highlight {
+  color: #eb9898;
+}
+
+.caption {
+  color: #eb9898;
+  font-size: 14px;
+}
+
+.devlogImage {
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.devlogImageFullWidth {
+  width: 90%;
+  margin-bottom: 30px;
+}
+
+.devlogImageFlexDiv {
+  display: flex;
+  flex-direction: row;
+}
+
+.devlogImageRow {
+  height: 250px;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+  #devlogDiv-fs2 {
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+
+  .devlogTitle {
+    font-size: 30px;
+    line-height: 1;
+    text-shadow: 3px 3px #555578;
+  }
+
+  .collapsible-header {
+    font-size: 16px;
+  }
+
+  .collapsible {
+    padding: 12px 18px;
+  }
+
+  .devlogImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .devlogImageFlexDiv {
+    flex-direction: column;
+  }
+}
+
+/*--------------------------------------------------------------
+# HORIZONTAL MOBILE
+--------------------------------------------------------------*/
+
+@media only screen and (orientation: landscape) {
+  /* #heroImg-fs2 {
+    margin-top: 40px !important;
+    width: 40vw !important;
+  } */
+
+  #header-fs2 #logo-fs2 {
+    position: absolute;
+  }
+
+  .btn-get-started {
+    margin: 0 !important;
+    margin-top: 20px !important;
+  }
+
+  #heroSubtitle-fs2 {
+    margin: 0 !important;
+  }
+
+  #footer-fs2 .container {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (orientation: landscape) and (max-width: 980px) {
+
+  #storeContent-fs2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #appicon-fs2 {
+    height: 25vw;
+    width: 25vw;
+  }
+
+  #app-flex-row-fs2 {
+    flex-direction: row;
+  }
+
+  #screenshot-fs2 {
+    width: 540px;
+    background-size: 100%;
+  }
+
+  .appbtn {
+    width: 28vw;
+    padding: 0.5rem;
+    padding-top: 3rem;
+  }
+
+  .nav-menu a {
+    font-size: 13px;
+  }
+
+  #heroImg-fs2 {
+    width: 50vh !important;
+    padding-bottom: 20px;
+  }
+
+  #hero-fs2 .btn-get-started {
+    font-size: 14px;
+    padding: 6px 24px;
+    border-radius: 50px;
+    transition: 0.5s;
+    margin: 30px;
+    border: 2px solid #fff;
+    color: #fff;
+    text-shadow: 2px 2px #555578;
+    box-shadow: 0px 3px #555578;
+  }
+
+  #about-fs2 .ingredients {
+    height: 25vh;
+  }
+
+  #ziyadbox-fs2 {
+    margin-left: 400px;
+    margin-right: 400px;
+  }
+}
+
+/*--------------------------------------------------------------
+# MOBILE REFINEMENTS
+# Phones and small tablets (<= 768px, the site's existing mobile
+# breakpoint) plus touch phones held in landscape. Everything in this
+# section lives inside media queries, so desktop styles above are
+# untouched. Placed last on purpose so it overrides earlier rules.
+--------------------------------------------------------------*/
+
+/*----------------------------------------------
+  A. SHARED: header, menu, back-to-top, section
+     heights, type and section layouts
+----------------------------------------------*/
+@media (max-width: 768px),
+       (orientation: landscape) and (max-height: 500px) and (pointer: coarse) {
+
+  /* ---- Page gutters ---- */
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* ---- Header ---- */
+  #header-fs2,
+  #header-fs2.header-fixed {
+    left: 0;
+    right: 0;
+    height: 64px;
+    padding: 0;
+  }
+
+  #header-fs2.header-fixed {
+    background: rgba(92, 124, 164, 0.94);
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.18);
+    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(6px);
+  }
+
+  #header-fs2 .container {
+    max-width: none; /* full width, so logo and menu button sit the same distance from each edge */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 76px; /* keeps the logo clear of the menu button */
+  }
+
+  #header-fs2 #logo-fs2 {
+    position: relative;
+  }
+
+  #header-fs2 #logo-fs2 h1 {
+    font-size: clamp(22px, 6.8vw, 30px);
+    line-height: 1;
+    padding: 0;
+    letter-spacing: -0.09em;
+    text-shadow: 2px 2.5px var(--dark-blue);
+    -webkit-text-stroke: 1.5px var(--dark-blue);
+  }
+
+  /* Desktop nav is replaced by the menu button on these screens */
+  #nav-menu-container-fs2 {
+    display: none;
+  }
+
+  /* ---- Menu button ---- */
+  #mobile-nav-toggle-fs2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 10px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+    line-height: 1;
+    background: var(--dark-blue);
+    border: 2px solid var(--white);
+    border-radius: 12px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.1s, box-shadow 0.1s;
+  }
+
+  #mobile-nav-toggle-fs2:active {
+    transform: translateY(2px);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  #mobile-nav-toggle-fs2:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: 2px;
+  }
+
+  /* ---- Slide-out menu ---- */
+  #mobile-nav-fs2 {
+    left: -320px;
+    width: min(80vw, 300px);
+    padding: 76px 0 24px;
+    background: var(--blue);
+    border-right: 6px solid var(--dark-blue);
+    box-shadow: 8px 0 0 rgba(0, 0, 0, 0.25);
+    transition: left 0.35s ease, visibility 0s linear 0.35s;
+    visibility: hidden; /* keeps off-screen links out of the tab order */
+  }
+
+  body.mobile-nav-active #mobile-nav-fs2 {
+    visibility: visible;
+    transition: left 0.35s ease, visibility 0s;
+  }
+
+  #mobile-nav-fs2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 14px;
+  }
+
+  #mobile-nav-fs2 ul li {
+    flex: 0 0 100%;
+  }
+
+  #mobile-nav-fs2 ul li a {
+    padding: 14px 14px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px var(--dark-blue);
+    border-bottom: 2px solid rgba(42, 69, 125, 0.35);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #mobile-nav-fs2 ul li a:active,
+  #mobile-nav-fs2 ul li a:hover {
+    background: rgba(42, 69, 125, 0.4);
+  }
+
+  #mobile-nav-fs2 ul li a:focus-visible {
+    outline: 3px solid var(--yellow);
+    outline-offset: -3px;
+  }
+
+  /* Social icons sit in one tidy row at the bottom of the menu */
+  #mobile-nav-fs2 ul li:has(> a.twitter) {
+    flex: 1 1 25%;
+  }
+
+  #mobile-nav-fs2 ul li a.twitter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 56px;
+    padding: 0;
+    font-size: 24px;
+    border-bottom: 0;
+    text-shadow: none;
+  }
+
+  #mobile-body-overly-fs2 {
+    background: rgba(20, 34, 64, 0.6);
+  }
+
+  /* ---- Back to top ---- */
+  .back-to-top,
+  .back-to-top:hover,
+  .back-to-top:focus {
+    right: 16px;
+    bottom: 16px;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 44px;
+    text-align: center;
+    background: var(--dark-blue);
+    border-radius: 12px;
+    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.25);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* ---- Sections: let content decide height (was a fixed 100vh,
+         which hid content behind the next section) ---- */
+  #hero-fs2 {
+    height: 100vh;
+    height: 100svh;
+    overflow: hidden; /* big spinning star can bleed off-screen without widening the page */
+  }
+
+  #hero-fs2 .hero-container {
+    padding: 72px 20px 28px;
+  }
+
+  #about-fs2,
+  #features-fs2,
+  #download-fs2 {
+    height: auto;
+    overflow-x: hidden; /* slide-in animations must not widen the page */
+    overflow-x: clip;
+  }
+
+  /* ---- Shared type ---- */
+  p {
+    font-size: 18px;
+    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  #aboutTitle-fs2,
+  #featureTitle-fs2,
+  #comingsoon-fs2 {
+    font-size: clamp(32px, 9.8vw, 44px) !important;
+    letter-spacing: -0.09em;
+    -webkit-text-stroke-width: 1.5px;
+    text-wrap: balance;
+  }
+
+  #aboutTitle-fs2 {
+    text-shadow: 2px 3px var(--dark-green);
+  }
+
+  #featureTitle-fs2 {
+    text-shadow: 2px 3px var(--dark-red);
+  }
+
+  #comingsoon-fs2 {
+    text-shadow: 2px 3px var(--dark-yellow);
+  }
+
+  /* ---- About ---- */
+  #about-fs2 {
+    padding: 56px 0 64px;
+  }
+
+  #about-fs2 .about-container .title {
+    padding-top: 0;
+    margin: 28px 0 18px;
+  }
+
+  #about-fs2 .about-container p {
+    font-size: 18px;
+    line-height: 1.55;
+    margin: 0 0 8px;
+  }
+
+  /* inline sizes in the markup are in px; scale them with the text */
+  #about-fs2 .about-container p > span[style*="30px"] {
+    font-size: 1.5em !important;
+    line-height: 1.1;
+    white-space: nowrap;
+  }
+
+  #about-fs2 .about-container p > span[style*="25px"] {
+    font-size: 1.25em !important;
+  }
+
+  #about-fs2 .shake-text {
+    font-size: 1.2em;
+  }
+
+  /* 16:9 video that fills the column (was a fixed 250px box) */
+  #gameplay-fs2 {
+    display: block;
+    width: 100%;
+    height: 52vw;
+    border-radius: 12px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  @supports (aspect-ratio: 16 / 9) {
+    #gameplay-fs2 {
+      height: auto;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  #about-fs2 .about-container .icon-box {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4vw;
+    padding: 24px 0 0;
+  }
+
+  #about-fs2 .ingredients {
+    filter: drop-shadow(4px 4px 0 rgba(0, 0, 0, 0.25));
+  }
+
+  /* keeps the original tomato : lettuce : lemon proportions */
+  #about-fs2 #about-tomato {
+    height: clamp(72px, 24vw, 120px);
+  }
+
+  #about-fs2 #about-lettuce {
+    height: clamp(82px, 27.5vw, 136px);
+  }
+
+  #about-fs2 #about-lemon {
+    height: clamp(58px, 19.5vw, 96px);
+  }
+
+  /* ---- Features ---- */
+  #features-fs2 {
+    padding: 56px 0 12px;
+  }
+
+  #features-fs2 .section-header .section-description {
+    font-size: 18px;
+    padding-bottom: 52px;
+    text-wrap: balance;
+  }
+
+  #features-fs2 .row > [class*="col-"] {
+    display: flex;
+  }
+
+  #features-fs2 .box {
+    width: 100%;
+    height: auto;
+    padding: 50px 22px 24px;
+    margin-bottom: 56px;
+    border-width: 8px;
+    border-radius: 22px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  #features-fs2 .title {
+    font-size: 22px;
+    line-height: 1.15;
+    margin-bottom: 6px !important;
+  }
+
+  #features-fs2 .description {
+    font-size: 17px;
+    line-height: 1.45;
+    text-wrap: balance;
+  }
+
+  /* ---- Download ---- */
+  #download-fs2 {
+    padding: 56px 0 64px;
+  }
+
+  #storeContent-fs2 {
+    width: 100%;
+    padding-top: 28px;
+    gap: 32px;
+  }
+
+  #appicon-fs2 {
+    width: clamp(128px, 38vw, 176px);
+    height: clamp(128px, 38vw, 176px);
+    border-radius: 24%;
+    filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.25));
+  }
+
+  #screenshot-fs2 {
+    display: block;
+    float: none;
+    left: 0;
+    width: min(calc(100% - 40px), 520px);
+    height: auto;
+    aspect-ratio: 3591 / 1781;
+    margin: 0 auto;
+    background-size: contain;
+    background-position: center !important;
+    filter: drop-shadow(6px 6px 0 rgba(0, 0, 0, 0.25));
+  }
+}
+
+/*----------------------------------------------
+  B. PHONES / SMALL TABLETS (<= 768px)
+----------------------------------------------*/
+@media (max-width: 768px) {
+
+  /* ---- Hero ----
+     The star used to be 65vh wide (wider than a phone screen), which
+     stretched the whole page and pushed the logo and menu button
+     off-screen. It's now sized from the screen width and clipped. */
+  .image-stack {
+    grid-template-columns: minmax(0, 1fr);
+    margin-bottom: 9vw; /* room for the star's downward offset, so it stays clear of the tagline */
+  }
+
+  #heroImg-fs2 {
+    width: 72vw;
+    width: min(74vw, 44svh, 380px);
+  }
+
+  #heroImg-star-fs2 {
+    width: 114vw;
+    width: min(105vw, 60svh);
+    margin-top: 0;
+    position: relative;
+    top: 5%;
+  }
+
+  #heroSubtitle-fs2 {
+    margin: 4px 0 0;
+    font-size: 20px;
+  }
+
+  #hero-fs2 .btn-get-started {
+    margin: 20px 0 0;
+    padding: 12px 38px;
+    font-size: 18px;
+    box-shadow: 0 5px var(--dark-blue);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  #hero-fs2 .btn-get-started:active {
+    transform: translateY(3px);
+    box-shadow: 0 2px var(--dark-blue);
+    background: var(--dark-blue);
+    border-color: var(--dark-blue);
+  }
+
+  /* ---- Footer: icons side by side on top, text beneath ---- */
+  #footer-fs2 {
+    padding: 36px 0 40px;
+  }
+
+  #footer-fs2 .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "fish onion"
+      "words words";
+    align-items: center;
+    justify-items: center;
+    column-gap: 8px;
+    row-gap: 20px;
+  }
+
+  #footer-fs2 .container > img:first-child {
+    grid-area: fish;
+    justify-self: end;
+  }
+
+  #footer-fs2 .container > img:last-child {
+    grid-area: onion;
+    justify-self: start;
+  }
+
+  #footer-fs2 .ingredients {
+    width: min(36vw, 150px);
+    height: auto;
+  }
+
+  #footerWords-fs2 {
+    grid-area: words;
+    padding: 0;
+  }
+
+  #footer-fs2 .copyright {
+    font-size: 16px;
+    line-height: 1.6;
+    text-wrap: balance;
+  }
+
+  #footerWords-fs2 a {
+    display: inline-block;
+    padding: 6px 8px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+/*----------------------------------------------
+  C. PHONES IN LANDSCAPE (short, wide, touch)
+  The older landscape rules size the hero from vw, which is
+  taller than a landscape phone screen.
+----------------------------------------------*/
+@media (orientation: landscape) and (max-height: 500px) and (pointer: coarse) {
+
+  #header-fs2,
+  #header-fs2.header-fixed {
+    height: 56px;
+  }
+
+  #mobile-nav-toggle-fs2 {
+    top: 6px;
+  }
+
+  #hero-fs2 .hero-container {
+    padding: 56px 20px 12px;
+  }
+
+  #heroImg-fs2 {
+    width: auto !important;
+    height: 42svh;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .image-stack {
+    margin-bottom: 5svh;
+  }
+
+  #heroImg-star-fs2 {
+    width: auto;
+    height: 58svh;
+    margin-top: 0;
+    position: relative;
+    top: 9%;
+  }
+
+  #heroSubtitle-fs2 {
+    margin: 0 !important;
+    font-size: 18px;
+  }
+
+  #hero-fs2 .btn-get-started {
+    margin: 8px 0 0 !important;
+    padding: 8px 30px;
+    font-size: 16px;
+  }
+}
+
+/*----------------------------------------------
+  D. REDUCED MOTION (phones)
+----------------------------------------------*/
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  #hero-fs2,
+  #footer-fs2 {
+    animation: none;
+  }
+
+  .animated,
+  .shake-text {
+    animation: none !important;
+  }
+}

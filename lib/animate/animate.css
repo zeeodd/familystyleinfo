@@ -88,6 +88,26 @@
   animation-name: pulse;
 }
 
+/**/
+
+@keyframes pulsetwo {
+  from {
+    transform: scale3d(1, 1, 1) rotate(0deg);
+  }
+
+  20% {
+    transform: scale3d(1.05, 1.05, 1.05) rotate(5deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1) rotate(0deg);
+  }
+}
+
+.pulsetwo {
+  animation-name: pulsetwo;
+}
+
 @keyframes rubberBand {
   from {
     transform: scale3d(1, 1, 1);
@@ -1214,6 +1234,20 @@
     transform: translate3d(0, 700px, 0);
     opacity: 0;
   }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+.spin {
+  animation-name: spin;
+  animation-timing-function: linear;
 }
 
 .hinge {
