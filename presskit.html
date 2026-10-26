@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--
+    PRESS KIT TEMPLATE  (save at the site root, next to index.html)
+    HOW TO FILL IT IN
+    - Anything in [Square Brackets] or Lorem ipsum is placeholder copy: replace it.
+    - Repeatable blocks (shots, awards, quotes, team, FAQ) are marked "REPEAT": copy/delete as needed.
+    - Image slots are <div class="pk-ph">: replace the div with <img src="..." alt="...">; the CSS crops it to fit.
+    - Video slots: replace the .pk-ph div with <iframe src="https://www.youtube.com/embed/ID" allowfullscreen></iframe>.
+    - Download links use href="#": point them at your files (add the `download` attribute for images).
+    - data-pk="..." attributes mark key content nodes, in case you ever want to fill them from JSON.
+    - Styles live in css/style-fs2.css (section "PRESS KIT"). If you serve style-fs2.min.css, re-minify it.
+    - Analytics: paste the same gtag snippet used on index.html here if you want it tracked.
+  -->
+  <meta charset="utf-8">
+  <title>Press Kit | Family Style: Second Serving</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="[Press kit description for search engines.]" name="description">
+  <meta property="og:title" content="[Game Title] Press Kit" />
+  <meta property="og:description" content="[Short description]" />
+  <meta property="og:image" content="[https://familystyle.info/img/presskit/share.png]" />
+  <link href="img/fs2/FS2-Favicon.png" rel="icon">
+  <link href="img/fs2/FS2-Favicon.png" rel="apple-touch-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sigmar+One&display=swap" rel="stylesheet">
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+  <link href="css/style-fs2.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <a class="pk-skip" href="#pk-about">Skip to content</a>
+
+  <!--==========================
+    HEADER (same markup as index.html)
+  ============================-->
+  <header id="header-fs2">
+    <div class="container noselect">
+      <div id="logo-fs2" class="pull-left">
+        <h1><a href="index.html">FAMILY STYLE</a></h1>
+      </div>
+      <nav id="nav-menu-container-fs2">
+        <ul class="nav-menu">
+          <li><a data-nav-link="home" href="index.html">Home</a></li>
+          <li><a data-nav-link="about" href="#pk-about">About</a></li>
+          <li><a data-nav-link="media" href="#pk-trailer">Media</a></li>
+          <li><a data-nav-link="assets" href="#pk-assets">Assets</a></li>
+          <li><a data-nav-link="press" href="#pk-credits">Credits</a></li>
+          <li><a data-nav-link="contact" href="#pk-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!--==========================
+      ABOUT: fact sheet + descriptions
+    ============================-->
+    <section id="pk-about" class="pk-s pk-g" aria-labelledby="about-h">
+      <div class="container pk-wrap">
+        <h2 id="about-h" class="pk-title">About</h2>
+        <p class="pk-sub">Learn more about Family Style and Co-op Kitchen!</p>
+
+        <div class="pk-split">
+          <aside class="pk-ticket" aria-label="Fact sheet">
+            <div class="pk-ticket-head">Fact Sheet <small>Updated<br/>Oct 2026</small></div>
+            <dl class="pk-facts">
+              <div><dt>Developer</dt><dd data-pk="fact-developer">Co-op Kitchen LLC</div>
+              <div><dt>Publisher</dt><dd data-pk="fact-publisher">Self-published</dd></div>
+              <div><dt>Release Date</dt><dd data-pk="fact-release">Nov 12, 2026</dd></div>
+              <div><dt>Platforms</dt><dd data-pk="fact-platforms">Android, iOS</dd></div>
+              <div><dt>Genre</dt><dd data-pk="fact-genre">Casual, Family, Party, Multiplayer</dd></div>
+              <div><dt>Players</dt><dd data-pk="fact-players">2 - 8</dd></div>
+              <div><dt>Price</dt><dd data-pk="fact-price">Free with IAPs</dd></div>
+              <div><dt>Languages</dt><dd data-pk="fact-languages">English, French, Spanish, Traditional Chinese, Thai</dd></div>
+              <!-- REPEAT: add more rows (engine, age rating, etc.) -->
+              <div><dt>Website</dt><dd><a href="https:/www.familystyle.info" data-pk="fact-website">familystyle.info</a></dd></div>
+              <div><dt>Press Contact</dt><dd><a href="mailto:coopkitchenllc@gmail.com" data-pk="fact-email">coopkitchenllc@gmail.com</a></dd></div>
+              <div style="border-bottom:0">
+                <dt>Socials</dt>
+                <dd class="pk-social">
+                  <!-- REPEAT: one link per channel -->
+                  <a href="https://www.youtube.com/@coopkitchengames" target="_blank" aria-label="Youtube"><img src="img/fs2/social-youtube.svg" alt=""></a>
+                  <a href="https://discord.gg/QEuEMyU" target="_blank" aria-label="Discord"><img src="img/fs2/social-discord.svg" alt=""></a>
+                  <a href="https://x.com/TeamCoopKitchen" target="_blank" aria-label="X"><img src="img/fs2/social-x.svg" alt=""></a>
+                  <a href="https://www.instagram.com/familystyle.coopkitchen" target="_blank" aria-label="Instagram"><img src="img/fs2/social-ig.svg" alt=""></a>
+                  <a href="https://www.threads.com/@familystyle.coopkitchen" target="_blank" aria-label="Threads"><img src="img/fs2/social-threads.svg" alt=""></a>
+                </dd>
+              </div>
+            </dl>
+          </aside>
+
+          <div class="pk-stack">
+            <article class="pk-card" style="margin-bottom:28px">
+              <div class="pk-bar"><h3>Pitch</h3>
+                <button type="button" class="pk-btn solid sm pk-copy" data-copy-target="#pk-short"><i class="fa fa-clipboard"></i><span>Copy</span></button></div>
+              <p id="pk-short" data-pk="short-description" style="margin:0"><i>Family Style</i> is a frantic mobile co-op party game for 2–8 players where chaos reigns in the kitchen! Race against the clock to pass ingredients from phone to phone and assemble recipes together with your friends. Communicate fast and clearly to overcome wild kitchen hazards and cookware minigames in this ultimate test of culinary teamwork!</p>
+            </article>
+            <article class="pk-card" style="margin-bottom:28px">
+              <div class="pk-bar"><h3>Description</h3>
+                <button type="button" class="pk-btn solid sm pk-copy" data-copy-target="#pk-long"><i class="fa fa-clipboard"></i><span>Copy</span></button></div>
+              <div id="pk-long" data-pk="long-description">
+                <!-- REPEAT: paragraphs -->
+                <p>Still too many cooks in the kitchen? Perfect. Welcome back to <i>FAMILY STYLE</i>!</p>
+                <p>The co-op cooking game you love is back, and it’s bigger, tastier, and more chaotic than ever before! Shout louder and scramble faster in this long-awaited sequel to the hit party game for 2 to 8 friends.</p>
+                <p>Race against the clock to juggle dozens of new ingredients and complete hundreds of new recipes as your team struggles to communicate and stay organized. Achievements, cookware minigames, round hazards, and a new profile system ensure every round feels fresh and unique!</p>
+                <p>How long can your team keep it together when the kitchen starts fighting back?</p>
+                <p>🤝 COOPERATIVE</p>
+                <p>Pass ingredients, call out orders, and keep your kitchen running as a team. Every chef has a role, and clear communication is the difference between success and disaster!</p>
+                <p>⚡ FRANTIC</p>
+                <p>Tables fill up, mistakes pile on, and the clock never stops. Think fast or fall behind. Cookware minigames and unexpected hazards will only crank up the chaos!</p>
+                <p>✨ EXPRESSIVE</p>
+                <p style="margin:0">Customize your profile, take on unique achievements, and earn rewards every time you play. Whether you’re a master chef or a butterfingers, everyone will know your style.</p>
+              </div>
+            </article>
+            <article class="pk-card">
+              <div class="pk-bar"><h3>About the Studio</h3>
+                <button type="button" class="pk-btn solid sm pk-copy" data-copy-target="#pk-studio"><i class="fa fa-clipboard"></i><span>Copy</span></button></div>
+              <p id="pk-studio" data-pk="studio-boilerplate" style="margin:0">Co-op Kitchen is an independent game studio that was formed by seven undergraduate seniors. The studio rose to prominence after releasing <i>Family Style</i>, a chaotic, multiplayer mobile cooking game that became an unexpected international viral hit in Thailand, Taiwan, and Vietnam. Building upon the original recipe, the now smaller studio is releasing its long-awaited sequel, <i>Family Style: Second Serving</i>.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      FEATURES
+    ============================-->
+    <section id="pk-features" class="pk-s pk-r" aria-labelledby="feat-h">
+      <div class="container pk-wrap">
+        <h2 id="feat-h" class="pk-title">Features</h2>
+        <p class="pk-sub">Our key ingredients for success</p>
+        <div class="pk-grid f">
+          <!-- REPEAT: one box per feature. Swap the Font Awesome class (fa-star, fa-heart...) for any other icon -->
+          <div class="pk-feat"><div class="ic"><i class="iconoir-community"></i></div><h4>Fun with Friends</h4><p>Local and online co-op for 2-8 phones across Android & iOS!</p></div>
+          <div class="pk-feat"><div class="ic"><i class="iconoir-fish"></i></div><h4>Unique Gameplay</h4><p>Swipe to pass ingredients from phone to phone!</p></div>
+          <div class="pk-feat"><div class="ic"><i class="iconoir-warning-triangle"></i></div><h4>Shift Hazards</h4><p>Gameplay hazards ramp up the cooking chaos!</p></div>
+          <div class="pk-feat"><div class="ic"><i class="iconoir-medal"></i></div><h4>Prestige</h4><p>Earn medals and complete 40+ achievements!</p></div>
+          <div class="pk-feat"><div class="ic"><i class="iconoir-emoji-blink-left"></i></div><h4>Personalization</h4><p>Customize your profile, plates, tables, and more!</p></div>
+          <div class="pk-feat"><div class="ic"><i class="iconoir-book-stack"></i></div><h4>Big Kitchen</h4><p>100+ ingredients and 500+ recipes to explore!</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      TRAILER & VIDEOS
+    ============================-->
+    <section id="pk-trailer" class="pk-s pk-b" aria-labelledby="trailer-h">
+      <div class="container pk-wrap">
+        <h2 id="trailer-h" class="pk-title">Trailer</h2>
+        <p class="pk-sub"></p>
+        <div class="pk-video" data-pk="main-trailer">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0AjyuMpzX-o?si=q2vi-JiIIVEe7K3c" title="Family Style: Second Serving trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe>
+        </div>
+        <div class="pk-row" style="margin-top:28px">
+          <a href="img/fs2/downloads/FS2-LaunchTrailer.mp4" target="_blank" class="pk-btn" data-asset="trailer-file" download="FamilyStyle2-LaunchTrailer.mp4"><i class="fa fa-download"></i> Download Trailer</a>
+        </div>
+
+        <h3 class="pk-h3">More Videos</h3>
+        <div id="pk-video-div" class="pk-grid">
+
+          <figure class="m-0">
+            <div class="pk-video sm">
+              <video controls autoplay muted loop playsinline width="100%" height="auto" style="object-fit: cover;">
+              <source src="img/fs2/downloads/FS2-Gameplay-1.mp4" type="video/mp4">
+            </div>
+            <figcaption class="pk-cap">Assembling multiple plates with the cutting board!</figcaption>
+            <div class="pk-row" style="margin-top:28px">
+              <a href="img/fs2/downloads/FS2-Gameplay-1.mp4" target="_blank" class="pk-btn" data-asset="trailer-file" download="FamilyStyle2-LaunchTrailer.mp4"><i class="fa fa-download"></i>Download</a>
+            </div>
+          </figure>
+
+          <figure class="m-0">
+            <div class="pk-video sm">
+              <video controls autoplay muted loop playsinline width="100%" height="auto" style="object-fit: cover;">
+              <source src="img/fs2/downloads/FS2-Gameplay-2.mp4" type="video/mp4">
+            </div>
+            <figcaption class="pk-cap">Hot potatoes, a custom table, a custom plate, and ingredient skins!</figcaption>
+            <div class="pk-row" style="margin-top:28px">
+              <a href="img/fs2/downloads/FS2-Gameplay-2.mp4" target="_blank" class="pk-btn" data-asset="trailer-file" download="FamilyStyle2-LaunchTrailer.mp4"><i class="fa fa-download"></i>Download</a>
+            </div>
+          </figure>
+
+          <figure class="m-0">
+            <div class="pk-video sm">
+              <video controls autoplay muted loop playsinline width="100%" height="auto" style="object-fit: cover;">
+              <source src="img/fs2/downloads/FS2-Gameplay-3.mp4" type="video/mp4">
+            </div>
+            <figcaption class="pk-cap">Trying to survive a round with an incredibly intese cross-breeze!</figcaption>
+            <div class="pk-row" style="margin-top:28px">
+              <a href="img/fs2/downloads/FS2-Gameplay-3.mp4" target="_blank" class="pk-btn" data-asset="trailer-file" download="FamilyStyle2-LaunchTrailer.mp4"><i class="fa fa-download"></i>Download</a>
+            </div>
+          </figure>
+
+        </div>
+      </div>
+    </section>
+
+    <!--==========================
+      SCREENSHOTS & GIFS
+    ============================-->
+    <section id="pk-screenshots" class="pk-s pk-y" aria-labelledby="shots-h">
+      <div class="container pk-wrap">
+        <h2 id="shots-h" class="pk-title">Screenshots</h2>
+        <p class="pk-sub"></p>
+        <div class="pk-grid">
+          <!-- REPEAT: replace .pk-ph with <img src="img/presskit/shots/01.jpg" alt="..."> and point .dl at the full-res file -->
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-Screenshot-1.PNG" alt="Second Serving Gameplay Screenshot #1"><a href="img/fs2/downloads/FS2-Screenshot-1.PNG" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> Full size</a></div><figcaption class="pk-cap">A plate is ready to be served!</figcaption></figure>
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-Screenshot-2.PNG" alt="Second Serving Gameplay Screenshot #2"><a href="img/fs2/downloads/FS2-Screenshot-2.PNG" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> Full size</a></div><figcaption class="pk-cap">Burgers on the beach!</figcaption></figure>
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-Screenshot-3.PNG" alt="Second Serving Gameplay Screenshot #3"><a href="img/fs2/downloads/FS2-Screenshot-3.PNG" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> Full size</a></div><figcaption class="pk-cap">Now that's a crowded table...</figcaption></figure>
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-Screenshot-4.PNG" alt="Second Serving Gameplay Screenshot #4"><a href="img/fs2/downloads/FS2-Screenshot-4.PNG" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> Full size</a></div><figcaption class="pk-cap">Profile editor!</figcaption></figure>
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-Screenshot-6.PNG" alt="Second Serving Gameplay Screenshot #5"><a href="img/fs2/downloads/FS2-Screenshot-6.PNG" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> Full size</a></div><figcaption class="pk-cap">Actually... THAT's a crowded table...</figcaption></figure>
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-Screenshot-5.PNG" alt="Second Serving Gameplay Screenshot #6"><a href="img/fs2/downloads/FS2-Screenshot-5.PNG" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> Full size</a></div><figcaption class="pk-cap">Weight Plates achievement description!</figcaption></figure>
+        </div>
+
+        <h3 class="pk-h3">GIFs</h3>
+        <div class="pk-grid">
+          <!-- REPEAT -->
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-GIF-1.gif" alt="Second Serving Gameplay GIF #1"><a href="img/fs2/downloads/FS2-GIF-1.gif" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> GIF</a></div><figcaption class="pk-cap">Submitting the shift-ending plate!</figcaption></figure>
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-GIF-2.gif" alt="Second Serving Gameplay GIF #2"><a href="img/fs2/downloads/FS2-GIF-2.gif" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> GIF</a></div><figcaption class="pk-cap">Cross-breeze gameplay hazard on a galaxy table!</figcaption></figure>
+          <figure class="m-0"><div class="pk-shot"><img src="img/fs2/downloads/FS2-GIF-3.gif" alt="Second Serving Gameplay GIF #3"><a href="img/fs2/downloads/FS2-GIF-3.gif" target="_blank" class="pk-btn solid sm dl"><i class="fa fa-download"></i> GIF</a></div><figcaption class="pk-cap">Boiling up some fish!</figcaption></figure>
+        </div>
+        <!-- <div class="pk-row" style="margin-top:36px">
+          <a href="#" class="pk-btn" data-asset="all-screenshots"><i class="fa fa-file-archive-o"></i> Download All Screenshots (.zip)</a>
+        </div> -->
+      </div>
+    </section>
+
+    <!--==========================
+      LOGOS & ASSETS
+    ============================-->
+    <section id="pk-assets" class="pk-s pk-g" aria-labelledby="assets-h">
+      <div class="container pk-wrap">
+        <h2 id="assets-h" class="pk-title">Logos and Assets</h2>
+        <p class="pk-sub"></p>
+        <div class="pk-grid">
+          <!-- REPEAT: one card per asset. .pk-wide makes a card span two columns -->
+          <article class="pk-card"><div class="pk-prev" id="pk-game-logo"><img src="img/fs2/downloads/FS2-Logo-Game.PNG" alt="Family Style 2's Logo"></div><h3>Game Logo</h3><p class="spec"></p><a href="img/fs2/downloads/FS2-Logo-Game.PNG" target="_blank" class="pk-btn solid sm" data-asset="logo"><i class="fa fa-download"></i> Download</a></article>
+          <article class="pk-card"><div class="pk-prev" id="pk-app-icon"><img src="img/fs2/downloads/FS2-AppIcon.PNG" alt="Family Style 2's App Icon"></div><h3>App Icon</h3><p class="spec"></p><a href="img/fs2/downloads/FS2-AppIcon.PNG" target="_blank" class="pk-btn solid sm" data-asset="icon"><i class="fa fa-download"></i> Download</a></article>
+          <article class="pk-card"><div class="pk-prev" ><img src="img/fs2/downloads/FS2-Logo-Studio.PNG" alt="Co-op Kitchen Studio Logo"></div><h3>Studio Logo</h3><p class="spec"></p><a href="img/fs2/downloads/FS2-Logo-Studio.PNG" target="_blank" class="pk-btn solid sm" data-asset="studio-logo"><i class="fa fa-download"></i> Download</a></article>
+          <article class="pk-card pk-wide"><div class="pk-prev" id="pk-keyart"><img src="img/fs2/downloads/FS2-Keyart.PNG" alt="Second Serving Key Art"></div><h3>Key Art</h3><p class="spec"></p><a href="img/fs2/downloads/FS2-Keyart.PNG" target="_blank" class="pk-btn solid sm" data-asset="key-art"><i class="fa fa-download"></i> Download</a></article>
+          <!-- <article class="pk-card"><h3>[Brand Notes]</h3><p style="margin:0">[Colors, typefaces, and logo usage rules. Lorem ipsum dolor sit amet.]</p></article> -->
+        </div>
+        <!-- <div class="pk-row" style="margin-top:36px">
+          <a href="#" class="pk-btn" data-asset="all-assets"><i class="fa fa-file-archive-o"></i> Download All Assets (.zip)</a>
+        </div> -->
+      </div>
+    </section>
+
+    <!--==========================
+      AWARDS, QUOTES, COVERAGE
+    ============================-->
+    <!-- REPEAT: swap the trophy icon for <img src="..." alt="..."> -->
+    <!-- <section id="pk-press" class="pk-s pk-r" aria-labelledby="press-h">
+      <div class="container pk-wrap">
+        <h2 id="press-h" class="pk-title">Awards &amp; Press</h2>
+        <p class="pk-sub">[Section intro. Lorem ipsum dolor sit amet.]</p>
+
+        <div class="pk-grid c4">
+          <div class="pk-award"><div class="pk-badge"><i class="fa fa-trophy"></i></div><h4>[Award Name]</h4><p>[Organization · Year]</p></div>
+          <div class="pk-award"><div class="pk-badge"><i class="fa fa-trophy"></i></div><h4>[Award Name]</h4><p>[Organization · Year]</p></div>
+          <div class="pk-award"><div class="pk-badge"><i class="fa fa-trophy"></i></div><h4>[Award Name]</h4><p>[Organization · Year]</p></div>
+          <div class="pk-award"><div class="pk-badge"><i class="fa fa-trophy"></i></div><h4>[Award Name]</h4><p>[Organization · Year]</p></div>
+        </div>
+
+        <h3 class="pk-h3">Quotes</h3>
+        <div class="pk-grid">
+          <blockquote class="pk-card pk-quote"><i class="fa fa-quote-left"></i><p>[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]</p><footer>— <a href="#">[Outlet / Person]</a></footer></blockquote>
+          <blockquote class="pk-card pk-quote"><i class="fa fa-quote-left"></i><p>[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]</p><footer>— <a href="#">[Outlet / Person]</a></footer></blockquote>
+          <blockquote class="pk-card pk-quote"><i class="fa fa-quote-left"></i><p>[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]</p><footer>— <a href="#">[Outlet / Person]</a></footer></blockquote>
+        </div>
+      </div>
+    </section> -->
+
+    <!--==========================
+      CREDITS
+    ============================-->
+    <section id="pk-credits" class="pk-s pk-r" aria-labelledby="credits-h">
+      <div class="container pk-wrap">
+        <h2 id="credits-h" class="pk-title">Credits</h2>
+        <p class="pk-sub">Say hello to our tiny development team!</p>
+        <div class="pk-grid c4">
+          <!-- REPEAT: replace .pk-ph with <img src="..." alt="Name"> -->
+          <!-- <a href="#">[@handle]</a> -->
+          <div class="pk-member"><div class="pk-pic"><img src="img/fs2/PlatePal_1.PNG" alt="Ryan's Plate Pal" class="animated pulse infinite"></div><h4>Ryan Feldman</h4><span>Tech Director</span></div>
+          <div class="pk-member"><div class="pk-pic"><img src="img/fs2/PlatePal_3.PNG" alt="Charlie's Plate Pal" class="animated pulse infinite"></div><h4>Charlie Harper</h4><span>Art Director</span></div>
+          <div class="pk-member"><div class="pk-pic"><img src="img/fs2/PlatePal_4.PNG" alt="Remy's Plate Pal" class="animated pulse infinite"></div><h4>Remy Chanfreau</h4><span>Art Lead</span></div>
+          <div class="pk-member"><div class="pk-pic"><img src="img/fs2/PlatePal_2.PNG" alt="Ziyad's Plate Pal" class="animated pulse infinite"></div><h4>Ziyad Durón</h4><span>Design Director</span></div>
+        </div>
+        <article class="pk-card" style="margin-top:44px">
+          <h3>Additional Credits</h3>
+          <p style="margin:0" data-pk="special-thanks">⦿ Ryan Ike - Music</p>
+          <p style="margin:0" data-pk="special-thanks">⦿ Chris Parker- Sound Design</p>
+          <p style="margin:0" data-pk="special-thanks">⦿ Micahel Bozdeck-Cubillos - Sound Design</p>
+          <p style="margin:0; padding-bottom: 16px" data-pk="special-thanks">⦿ Andrea Durón, Lang Faith - Translations</p>
+          <h3>Additional Thanks</h3>
+          <p style="margin:0" data-pk="special-thanks">⦿ Special thanks to our Discord community, playtesters, and all those who have helped make this possible!</p>
+          <p style="margin:0" data-pk="special-thanks">⦿ Thank you for your contributions to Family Style: Day Lane, Jacob Gleberman, Sameer Khoja, Jeremy Storey, Rena Ryumae</p>
+          <p style="margin:0" data-pk="special-thanks">⦿ Family Style: Second Serving was made with Unity®. Unity is a trademark or registered trademark of Unity Technologies. Copyright © 2025-2026 Unity Technologies. All rights reserved.</p>
+          <p style="margin:0" data-pk="special-thanks">⦿ Made with help from FMOD by Firelight Technologies PTY LTD.</p>
+        </article>
+      </div>
+    </section>
+
+    <!--==========================
+      FAQ & USAGE
+    ============================-->
+    <!-- <section id="pk-faq" class="pk-s pk-y pk-faq" aria-labelledby="faq-h">
+      <div class="container pk-wrap" style="max-width:860px">
+        <h2 id="faq-h" class="pk-title">FAQ &amp; Usage</h2>
+        <p class="pk-sub">[Section intro. Lorem ipsum dolor sit amet.]</p>
+        <details><summary class="pk-sum">Usage Guidelines</summary><div><p>[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]</p></div></details>
+        <details><summary class="pk-sum">Streaming &amp; Monetization</summary><div><p>[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]</p></div></details>
+        <details><summary class="pk-sum">Legal &amp; Copyright</summary><div><p>[Lorem ipsum dolor sit amet, consectetur adipiscing elit.]</p></div></details>
+      </div>
+    </section> -->
+
+    <!--==========================
+      CONTACT
+    ============================-->
+    <section id="pk-contact" class="pk-s pk-y" aria-labelledby="contact-h">
+      <div class="container pk-wrap">
+        <h2 id="contact-h" class="pk-title">Contact</h2>
+        <p class="pk-sub">We'd love to hear from you :)</p>
+        <div class="pk-grid c2">
+          <article class="pk-card">
+            <h3>Press Contacts</h3>
+            <p style="margin:0 0 6px; font-size: 22px; font-weight: 900;" data-pk="contact-name">Ryan Feldman & Ziyad Durón, Founders</p>
+            <p style="margin:0 0 6px"><i class="fa fa-envelope"></i> <a href="mailto:coopkitchenllc@gmail.com" data-pk="contact-email">coopkitchenllc@gmail.com</a></p>
+            <p style="margin:0" data-pk="contact-note"><i>Looking forward to <s>cooking</s> connecting with you!</i></p>
+            <div class="pk-social">
+              <a href="https://www.youtube.com/@coopkitchengames" target="_blank" aria-label="Youtube"><img src="img/fs2/social-youtube.svg" alt=""></a>
+              <a href="https://discord.gg/QEuEMyU" target="_blank" aria-label="Discord"><img src="img/fs2/social-discord.svg" alt=""></a>
+              <a href="https://x.com/TeamCoopKitchen" target="_blank" aria-label="X"><img src="img/fs2/social-x.svg" alt=""></a>
+              <a href="https://www.instagram.com/familystyle.coopkitchen" target="_blank" aria-label="Instagram"><img src="img/fs2/social-ig.svg" alt=""></a>
+              <a href="https://www.threads.com/@familystyle.coopkitchen" target="_blank" aria-label="Threads"><img src="img/fs2/social-threads.svg" alt=""></a>
+            </div>
+          </article>
+          <!-- <article class="pk-card">
+            <h3>Requests</h3>
+            <p>[Short note on review codes and interviews. Lorem ipsum dolor sit amet.]</p>
+            <div class="pk-row" style="justify-content:flex-start">
+              <a href="mailto:press@example.com?subject=Review%20Code%20Request" class="pk-btn solid sm">Review Code</a>
+              <a href="mailto:press@example.com?subject=Interview%20Request" class="pk-btn solid sm">Interview</a>
+              <a href="mailto:press@example.com?subject=Asset%20Request" class="pk-btn solid sm">More Assets</a>
+            </div>
+          </article> -->
+        </div>
+        <!-- <div class="pk-row" style="margin-top:44px">
+          <a href="#" class="pk-btn" data-asset="full-kit"><i class="fa fa-download"></i> Download Full Press Kit (.zip)</a>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <!--==========================
+    FOOTER (same markup as index.html)
+  ============================-->
+  <footer id="footer-fs2">
+    <div class="container noselect">
+      <img class="ingredients animated pulse infinite" src="img/fs2/FS_fish.png" alt="Fish Ingredient">
+      <div id="footerWords-fs2">
+        <div class="copyright">
+          Follow Our <a href="https://twitter.com/TeamCoopKitchen" target="_blank">X</a> &amp; <a href="https://discord.gg/QEuEMyU" target="_blank">Discord</a> <br/>
+          <a href="privacypolicy.html">Privacy Policy</a> <br/>
+          Copyright &copy; Co-op Kitchen LLC 2026
+        </div>
+      </div>
+      <img class="ingredients animated pulse infinite" src="img/fs2/FS_greenonion.png" alt="Green Onion Ingredient">
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top" aria-label="Back to top"><i class="fa fa-chevron-up"></i></a>
+  <script>
+    // Fixed header, back-to-top, mobile menu, copy buttons (no libraries needed)
+    (function () {
+      var $ = function (s, c) { return (c || document).querySelector(s); };
+      var header = $('#header-fs2'), toTop = $('.back-to-top'), body = document.body;
+
+      window.addEventListener('scroll', function () {
+        var past = window.pageYOffset > 100;
+        header.classList.toggle('header-fixed', past);
+        toTop.style.display = past ? 'block' : 'none';
+      }, { passive: true });
+      toTop.addEventListener('click', function (e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+      var mobile = $('#nav-menu-container-fs2').cloneNode(true); mobile.id = 'mobile-nav-fs2'; $('ul', mobile).className = '';
+      var btn = document.createElement('button'); btn.type = 'button'; btn.id = 'mobile-nav-toggle-fs2'; btn.setAttribute('aria-label', 'Menu'); btn.innerHTML = '<i class="fa fa-bars"></i>';
+      var overlay = document.createElement('div'); overlay.id = 'mobile-body-overly-fs2';
+      body.appendChild(mobile); body.insertBefore(btn, body.firstChild); body.appendChild(overlay);
+      function toggle(open) {
+        body.classList.toggle('mobile-nav-active', open);
+        $('i', btn).className = open ? 'fa fa-times' : 'fa fa-bars';
+        overlay.style.display = open ? 'block' : 'none';
+      }
+      btn.onclick = function () { toggle(!body.classList.contains('mobile-nav-active')); };
+      overlay.onclick = function () { toggle(false); };
+      mobile.addEventListener('click', function (e) { if (e.target.closest('a')) toggle(false); });
+
+      document.querySelectorAll('.pk-copy').forEach(function (b) {
+        b.addEventListener('click', function () {
+          var label = $('span', b), old = label.textContent;
+          navigator.clipboard.writeText($(b.getAttribute('data-copy-target')).innerText.trim()).then(function () {
+            label.textContent = 'Copied!'; setTimeout(function () { label.textContent = old; }, 1600);
+          });
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
